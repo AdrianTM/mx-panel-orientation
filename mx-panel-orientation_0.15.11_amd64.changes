@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 10 Nov 2015 19:13:25 -0500
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: source amd64
+Version: 0.15.11
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (0.15.11) mx; urgency=medium
+ .
+   * initial release
+Checksums-Sha1:
+ c80fbb7fbfdabcc45e00d63935d223d08ad59657 1204 mx-panel-orientation_0.15.11.dsc
+ c531d232c95b7c5a9f7eb51354d09b9d96d9be8b 70768 mx-panel-orientation_0.15.11.tar.xz
+ 29e390d3bd70502cf21fa79299c3bcdc3136d8d8 23566 mx-panel-orientation_0.15.11_amd64.deb
+Checksums-Sha256:
+ b2254f63d842a124a9b84a42e4310193ae126a05c4056cd5034cdf736cb82458 1204 mx-panel-orientation_0.15.11.dsc
+ 23cd160e96c9fd7c6d07eb5e1fd53403b5f2456325663d6ee4f892d0d4b94933 70768 mx-panel-orientation_0.15.11.tar.xz
+ 37afa6dea930902b21022bc4a9d0fe804bf72e758672494ddcccf13b63448c1a 23566 mx-panel-orientation_0.15.11_amd64.deb
+Files:
+ f066f1078c2735b45d270e36ddf40678 1204 admin optional mx-panel-orientation_0.15.11.dsc
+ 7c21beb48393111eb1fb0a9be3aacf67 70768 admin optional mx-panel-orientation_0.15.11.tar.xz
+ 3dd74a50c0ba4a80486a92d214ab50de 23566 admin optional mx-panel-orientation_0.15.11_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJWQo0IAAoJEHCTjHgGee6Y4S4H/2YEEm3mbkAMF/HMIep3E0RO
+bW8IijwZukRFIeNI9Qi3TErsJr6owxKHhnOtq1f81BlZ9gwmITMVNa0po7HkYaIU
+fNs22poJNNJ3QxgY/abI7G8lKZOIhpSYkurOk3NVMKYO/l6voGbdjZKSNXM91NJp
+XEY6pqiVfITc+5fB8TdScUPYNvCptYV2G5Hrv7TZ9mrR2NVaDN+F/HwGC8+ygECl
+JK/YB+LEEmowZtFzPgLBwXz4FvCOXBnx7qQ5xI5pkwsM5UodPCII5aFzsun25gR1
++wrjCkC0hZNoAX+kbV/H3+634VVywlMhjYJFcTMQBv9cVDafHejCDLQM5YgaKVA=
+=jfia
+-----END PGP SIGNATURE-----

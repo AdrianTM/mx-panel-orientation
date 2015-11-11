@@ -1,0 +1,14 @@
+Source: mx-panel-orientation
+Section: admin
+Priority: optional
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Build-Depends: qt5-qmake,
+	debhelper (>=7.0.50~)
+Standards-Version: 3.9.5
+Vcs-Git: git://github.com/AdrianTM/mx-panel-orientation
+
+Package: mx-panel-orientation
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer
+Description: MX Panel Orientation
+ MX Panel Orientation is a tool used for changing the orientation of the Xfce panel in MX Linux
