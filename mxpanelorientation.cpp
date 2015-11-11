@@ -84,29 +84,25 @@ void mxpanelorientation::on_buttonApply_clicked()
     if (ui->radioHorizontalPanel->isChecked()) {
         backupPanel();
         // copy template files
-        system("cp -R /usr/local/share/appdata/panels/horizontal/panel ~/.config/xfce4");
-        system("cp /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        system("xfce4-panel -r");
-        checkBackup();
+        system("cp -vR /usr/local/share/appdata/panels/horizontal/panel ~/.config/xfce4");
+        system("cp -v /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
         QMessageBox::information(0, tr("Panel settings"),
                                  tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
 
     } else if (ui->radioVerticalPanel->isChecked()) {
         backupPanel();
         // copy template files
-        system("cp -R /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4");
-        system("cp /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        // restart panel
-        system("xfce4-panel -r");
-        checkBackup();
+        system("cp -vR /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4");
+        system("cp -v /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
         QMessageBox::information(0, tr("Panel settings"),
                                  tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
     } else if (ui->radioRestoreBackup->isChecked()) {
-        system("cp -R ~/.restore/.config/xfce4/panel ~/.config/xfce4");
-        system("cp ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        system("xfce4-panel -r");
-    }
+        system("cp -vR ~/.restore/.config/xfce4/panel ~/.config/xfce4");
+        system("cp -v ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml");
 
+    }
+    checkBackup();
+    system("pkill xfconfd; xfce4-panel -r");
 }
 
 
@@ -138,8 +134,8 @@ void mxpanelorientation::backupPanel()
 {
     system("mkdir -p ~/.restore/.config/xfce4");
     system("mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml");
-    system("cp -R ~/.config/xfce4/panel ~/.restore/.config/xfce4");
-    system("cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    system("cp -vR ~/.config/xfce4/panel ~/.restore/.config/xfce4");
+    system("cp -v ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
 }
 
 // enable restore backup option if backup is present
