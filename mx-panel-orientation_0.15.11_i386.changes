@@ -18,20 +18,20 @@ Changes:
  .
    * initial release
 Checksums-Sha1: 
- 0487daf0037e762ebf9e8b02c7f91a6c0d423262 23258 mx-panel-orientation_0.15.11_i386.deb
+ ac494547f6f1c2f316c38a1322d21dd0fe29193c 23254 mx-panel-orientation_0.15.11_i386.deb
 Checksums-Sha256: 
- eef751ea437bc97a1251fc238fae846bcd04a908df7709616744f41240b012f3 23258 mx-panel-orientation_0.15.11_i386.deb
+ e1c7104ccd5b04dbe88bbbb8ace45424626da7c95231f08e2e096d5d91a823e5 23254 mx-panel-orientation_0.15.11_i386.deb
 Files: 
- b26cf9b8dca66ba9e0f42a21b60d8438 23258 admin optional mx-panel-orientation_0.15.11_i386.deb
+ d582e8bcb9b98abe5a1fad89c124ce41 23254 admin optional mx-panel-orientation_0.15.11_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEcBAEBAgAGBQJWQ2CmAAoJEHCTjHgGee6Ys6YH/1UudtO6BG1ZrizNAT3QIMMy
-yrGOKWoEjeoJw1unAB6OPlpKNmhreEf+nivV5LR+c5ZjGX+ELcmdJ8v2srWIsKFO
-OM4ZrRiwE6BMXhlDGw/0m9EN4dLy4MKiV/9PozpHZvK4ogQA5eS7NBa7QakPjnP9
-WAmdG+MJuN2QaoUXXmRF+gzI93zg83SA9QkDxHor1WqnyDUqoC9dQJqyZ7/zvsD6
-HTX1BOkrC9xPJMIA7DACqa7VfGqswMTJQfAMWzOcohh2HW5yh8dAUT/KN457wmU3
-SwTgyIsWXweg5FBdOl8d9jbX6oZroDpEyLT7SU22cIhMa7u1mlFUWJKj5Pvj8W4=
-=hhUz
+iQEcBAEBAgAGBQJWQ2NQAAoJEHCTjHgGee6Yy+kH/i1R2s8DzqpS1TPvR0dSqmVM
+QJNBLSkUJwcY5ErScc+WTMuBS9dRweBX44jQ2k1DIl9tSciJTqTLEF1PvKKCcPj+
+HR6/F0mxP0Gndgr5rasBDgvvleDMiH+exCcgdpetlMRaPfBHfgYh7ZnkRyRRN0Ls
+iSvKqZTxYidFKgA5JujVh50zHKfajS/Dl8J9m76P6OnAOQwPErvZeNflc3HFsU/Q
+8CE2mfd7QV0n0w06heHLDtZ/G8G3NlfPbIcBmMwQdNsH0egPy1C0n2mNLs5z2bHj
+knfo7AMew9PLpeLHNJClFoX5i2FqegjS0g9TZDRi4yWgsEOTxcoIPcTMUELzW7M=
+=7cwP
 -----END PGP SIGNATURE-----
