@@ -18,26 +18,26 @@ Changes:
  .
    * initial release
 Checksums-Sha1:
- c636bbab28c6bd15133d7fd82e688b3210a05e3c 1204 mx-panel-orientation_0.15.11.dsc
- 925f017451f739e6ba94c5f4bfcc13620fc36d11 93964 mx-panel-orientation_0.15.11.tar.xz
- eada4cb2f7fa9da2c348cabf811c49ac637e5ab4 22696 mx-panel-orientation_0.15.11_amd64.deb
+ 452a0993f5afe19c3883f1633e0118831df2f9ed 1207 mx-panel-orientation_0.15.11.dsc
+ 87b7fd7fd25615a58618acf856084f50a53b7f89 158720 mx-panel-orientation_0.15.11.tar.xz
+ 9c7e918d31c654d6fbbd34be6997a7325bbc8e2b 23568 mx-panel-orientation_0.15.11_amd64.deb
 Checksums-Sha256:
- d28fc5c6c9d5004e07efa0dc66d5b573f2867690b757d5a9560251bcb5a065f4 1204 mx-panel-orientation_0.15.11.dsc
- 45990c22880dd7c570e71d743c42824d1ac9ca0a572ace9470c2aece21691ae2 93964 mx-panel-orientation_0.15.11.tar.xz
- 54cca41158ec042c4c6e521e1909a04891c2c912d81c00500775531396c4a00a 22696 mx-panel-orientation_0.15.11_amd64.deb
+ 4cf77d45734d3ab02a0204060d44e76763714c06d8240955f424753f9e2be893 1207 mx-panel-orientation_0.15.11.dsc
+ 42ae5cdd182a5388df2df62788f01cd881a1faec7e7dc88f025bec0a1afc6df9 158720 mx-panel-orientation_0.15.11.tar.xz
+ 430517f16a077bce47fb16c1dc8b75e7b9d6f46559b1758d3a5702f300e44917 23568 mx-panel-orientation_0.15.11_amd64.deb
 Files:
- a6bc2c05892d3206d30c91ccf17cf1e2 1204 admin optional mx-panel-orientation_0.15.11.dsc
- 047245ed3afbfa413ceb3bebe83e643f 93964 admin optional mx-panel-orientation_0.15.11.tar.xz
- 11ca4c77d6bd40b45608f5fbabcb74ad 22696 admin optional mx-panel-orientation_0.15.11_amd64.deb
+ 572b514e00783f3ebca83488bc3238ce 1207 admin optional mx-panel-orientation_0.15.11.dsc
+ c4d5eabdb61d5f490ad6b17fc879d3bf 158720 admin optional mx-panel-orientation_0.15.11.tar.xz
+ 34993f95bfdea5840727d09acc99b103 23568 admin optional mx-panel-orientation_0.15.11_amd64.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJWQ8dTAAoJEHCTjHgGee6YEwsH+wcRqRzBZLl/Hq2i77UezjsN
-I8FDThGFnQ41gMeChk9oI1USeEJ+mvNVZ46tg4LwE3J/zupYX2OwV3R+T6Ke+iLZ
-xy9DFeD1LjIJbhmm6kHdWn0ShvGcKo8pseLySWDxea7zAG8F5E+ky9Wxvj7B1kLy
-nJKBdp7e2rOccqruoZ1H2yQZSWNfY4L2lzYg1LAmzv3oFavgMiwmRViQ4UVqAiz2
-8bk3yzOzhw97r36MtjEKjQbEuNE95J85z9B+ezkAqId0wqaturzlW9RPOXj9AEcP
-fr1vX1CWwTXQdVfqJwHbwPxQuEgDIqLgy+IeMMelI+B+McshXkgPZHX/4Z3OXFo=
-=pTOj
+iQEcBAEBAgAGBQJWRJDlAAoJEHCTjHgGee6Ye+kH/A7U1Q6TvFf/svxurEbfgmmX
+LNGf8qMZJe5vP6zVaJ9GeHZ+XyQSr5T4dI28wdt/uvjKV//4yowk0WM+UrAueiWp
+MlCG8349KqcoHaZe0x9R9Dw+1Rg/LFPk06dCCZvgdAuxFhG1ua0DKNva4AJbti45
+ekl7ThJaQPgn5MoqrYrZLHfYdTq3DdGPFCtdZlAcEsCLOwzqHo4bGSC6+xWtJibV
+DBew18bhaTCi0XXWFbzrz8FxBMu4HNdE7NbkhX/2wki1cJ0UzXdcMRCojC52KRpd
+qS0xpTesy+4+jYuWjAGTCMAO2D+HvOkn2DQG0N1MCZyqHPBZBV9iZfBDJG1N2qs=
+=rMIl
 -----END PGP SIGNATURE-----

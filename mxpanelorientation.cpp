@@ -47,7 +47,6 @@ void mxpanelorientation::setup()
     version = getVersion("mx-panel-orientation");
     this->setWindowTitle(tr("MX Panel Orientation"));
     this->adjustSize();
-    ui->buttonCancel->setEnabled(true);
     checkBackup();
 }
 
@@ -103,7 +102,6 @@ void mxpanelorientation::on_buttonApply_clicked()
         system("cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml");
 
     }
-
     qApp->quit();
 }
 
@@ -127,7 +125,7 @@ void mxpanelorientation::on_buttonAbout_clicked()
 // Help button clicked
 void mxpanelorientation::on_buttonHelp_clicked()
 {
-    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/user_manual_mx15/mxum.html#test '%1'").arg(tr("MX Panel Orientation"));
+    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/user_manual_mx15/mxum.html '%1'").arg(tr("MX Panel Orientation"));
     system(cmd.toUtf8());
 }
 

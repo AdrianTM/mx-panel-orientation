@@ -11,27 +11,27 @@ Distribution: mx
 Urgency: medium
 Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
 Changed-By: Adrian <adrian@mxlinux.org>
-Description: 
+Description:
  mx-panel-orientation - MX Panel Orientation
-Changes: 
+Changes:
  mx-panel-orientation (0.15.11) mx; urgency=medium
  .
    * initial release
-Checksums-Sha1: 
- 2d0e5c1b0885c14578bc8fdfb90656248b896668 23300 mx-panel-orientation_0.15.11_i386.deb
-Checksums-Sha256: 
- 581a53e14b92f1969dc7075af4ceb20082b24e6d04253f5b0393a8b0f07a8d07 23300 mx-panel-orientation_0.15.11_i386.deb
-Files: 
- eae08d50c5fa6192d1c365a0618b40bf 23300 admin optional mx-panel-orientation_0.15.11_i386.deb
+Checksums-Sha1:
+ fd5dc74a8d3d538c980cc2f9f6913cea9a2047c0 23632 mx-panel-orientation_0.15.11_i386.deb
+Checksums-Sha256:
+ 1f5750705bcacc30a416487c1728299f55c05d4b7dbdb3138abd5d3a631cc0bc 23632 mx-panel-orientation_0.15.11_i386.deb
+Files:
+ 66370c17154713384ea73ca589f5d74b 23632 admin optional mx-panel-orientation_0.15.11_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1
 
-iQEcBAEBAgAGBQJWQ6qnAAoJEHCTjHgGee6Yp80IAMQpmfBx1bLaedRoqbNWwD8G
-zM1tcxm+Kf3JcBJOtj8TzH6ze1A+khbn+smB8HpF2nXygWZnNcKTVK+2wKAw+JTB
-Tivrqq5idOzpb+/94S5VuRptLaEW2JYjE6UxWdkWbT8I/uZVXPKd9BReQTkpHTEo
-ABT7/AwyAv9blriu42wdEaZkC089JcpHgGiSbiuv7k9RzShvLM/BvgKSkIIq66LN
-Ry/+BPtQFVzEEa+K4yyulham/w0dlgtlML8c0wdEU2+lHrLeFi4fq2FqPizlDc6M
-ZDFJVbWiYp3KgVS/BzGsR4xMUX1LR2vIDWRodTzSpHRTcRjvmV1eZLeoY73+tIE=
-=ZIgt
+iQEcBAEBAgAGBQJWRJIoAAoJEHCTjHgGee6YucMIAJuHUoIg1Ey/F43S64RV4akj
+gUI/d623NU4Bf5wT5YxYT6qUfZy+27jYembgAr3U2LZrfWblulusGRfNUtdN9MM7
+PvgZ+bMTq+rtfrSLXqZu7jadj9B3ENDdHOUdGWnflun6HoGe9PK81jJyiCiBUsNC
+BCgeDwgoI7WzSJzQvFwWaFQepLzuVTC1C7bnPMpo5WAOL3xHRb84hO5CaU4E3ROb
+rz/zgjAbIItBKIAMXACNYWL8yqITVkxuo2HDGZrpUm8RN8l2vHCn8IqT9YvW9nWv
+TJ+TTVd2Sayl2hITZnPPjbotyvf3FoWuuvnzdssM/h+dn95XSPOs82yKweZreeg=
+=b7gy
 -----END PGP SIGNATURE-----
