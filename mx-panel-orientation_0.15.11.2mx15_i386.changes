@@ -18,20 +18,20 @@ Changes:
  .
    * added 48x48 icon
 Checksums-Sha1: 
- 1dd47277adbc5f59b3aedcf6a04665a92c87b99b 24436 mx-panel-orientation_0.15.11.2mx15_i386.deb
+ e921995a565fd93998334136d31cc47501352f3d 24428 mx-panel-orientation_0.15.11.2mx15_i386.deb
 Checksums-Sha256: 
- 1007095d4bd4bf266aa482d5882f83d090a2d685ff0534421ca0355e564ba6f1 24436 mx-panel-orientation_0.15.11.2mx15_i386.deb
+ 3e450b5564be55314bfbb898d2f66b1b0551aa6c7bd0595515f48e79ea46b64e 24428 mx-panel-orientation_0.15.11.2mx15_i386.deb
 Files: 
- 699cc3fd41be62276ca6af0981395190 24436 admin optional mx-panel-orientation_0.15.11.2mx15_i386.deb
+ 96fcf8aa7ed53241cebe1d4a6a4c78fc 24428 admin optional mx-panel-orientation_0.15.11.2mx15_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEcBAEBAgAGBQJWRgeaAAoJEHCTjHgGee6YRYoIAKDavGVzlC6WZ9IqQsVdPsIk
-wNNF1OlsiWsXopb8JR2/1rL8NMM1M2InRQHH/mySzKAL8F7J8f144IJsMukEenxs
-wdCsHAlziOWYNfpPp7/gqZrLBVMnvVmeuJ8DF4B25r1/nRlbG6ejzQKy/BVxWnBO
-ZPqTv911VeIQK3BWCjjS+GaoOJsoG6IjVqApjh1W6+ayxOktdFgnDh2DefmgM+9Y
-jUTA1AYvJ4MUYxDtLqHBUgpx8r0XZ/0/X4Np1aK0S2ZRBO+e05tbtl4wh967iAn/
-tJKWMofh5yTkPE2MkGz35t4e2YFozkJ03LZXo3nPDVLjAE0vE+Njlcvvlt7uDwQ=
-=2r3K
+iQEcBAEBAgAGBQJWRhWHAAoJEHCTjHgGee6YBPAIAIp4rz2nY1xrBW3Hp9XeYvuS
+Bll4oT3wUNcj1CK9EfWc0V/c8wEp1pl8n4sXGVYVXjNS3Ygkhgw9cM8Ui3euwAx7
+PYcUp4ldTmPwy4nKLhbPj2JP51/5gTalp2tMi+i1WTBqQ4184Zx4RAOg4m/6mkgx
+JL8zjjOQytRHYBUnmITp0/cfMiCY6byEAKGgNgnz/Nf29kQfB9cYYB52aZWitjdH
+hj6DDTO1gUKQsy1IegUab1vBmosw5Wp8qnwQyaQ5VFK6aNUnmc1ibfwgIjq+Is3A
+pflPOYQPfcr6fcAPZt6fMyZgaJmNyJN90eIMX/9oMwrNsm/rEaWuslRG8CseAyA=
+=4Fqf
 -----END PGP SIGNATURE-----

@@ -100,7 +100,7 @@ void mxpanelorientation::on_buttonApply_clicked()
     } else if (ui->radioRestoreBackup->isChecked()) {
         system("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4");
         system("cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml");
-
+        system("pkill xfconfd; xfce4-panel -r");
     }
     qApp->quit();
 }
