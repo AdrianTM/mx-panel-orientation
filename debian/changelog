@@ -1,3 +1,9 @@
+mx-panel-orientation (0.15.11.3mx15) mx; urgency=medium
+
+  * fix icon location
+
+ -- Adrian <adrian@mxlinux.org>  Fri, 13 Nov 2015 22:34:46 -0500
+
 mx-panel-orientation (0.15.11.2mx15) mx; urgency=medium
 
   * added 48x48 icon
