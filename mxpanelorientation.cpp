@@ -83,24 +83,24 @@ void mxpanelorientation::on_buttonApply_clicked()
     if (ui->radioHorizontalPanel->isChecked()) {
         backupPanel();
         // copy template files
-        system("cp -Rf /usr/local/share/appdata/panels/horizontal/panel ~/.config/xfce4");
-        system("cp -f /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        system("pkill xfconfd; xfce4-panel -r");
+        system("cp -Rf /usr/local/share/appdata/panels/horizontal/panel ~/.config/xfce4; \
+                cp -f /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+                pkill xfconfd; xfce4-panel -r");
         QMessageBox::information(0, tr("Panel settings"),
                                  tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
 
     } else if (ui->radioVerticalPanel->isChecked()) {
         backupPanel();
         // copy template files
-        system("cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4");
-        system("cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        system("pkill xfconfd; xfce4-panel -r");
+        system("cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
+               cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+               pkill xfconfd; xfce4-panel -r ");
         QMessageBox::information(0, tr("Panel settings"),
                                  tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
     } else if (ui->radioRestoreBackup->isChecked()) {
-        system("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4");
-        system("cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml");
-        system("pkill xfconfd; xfce4-panel -r");
+        system("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
+                cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
+                pkill xfconfd; xfce4-panel -r");
     }
     qApp->quit();
 }
@@ -125,7 +125,7 @@ void mxpanelorientation::on_buttonAbout_clicked()
 // Help button clicked
 void mxpanelorientation::on_buttonHelp_clicked()
 {
-    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/user_manual_mx15/mxum.html '%1'").arg(tr("MX Panel Orientation"));
+    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-panel-orientation '%1'").arg(tr("MX Panel Orientation"));
     system(cmd.toUtf8());
 }
 
