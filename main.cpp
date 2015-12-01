@@ -33,7 +33,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setWindowIcon(QIcon("/usr/share/pixmaps/mx/mx-panel-orientation.png"));
+    a.setWindowIcon(QIcon("/usr/share/pixmaps/mx-panel-orientation.png"));
 
     QTranslator qtTran;
     qtTran.load(QString("qt_") + QLocale::system().name());

@@ -132,10 +132,10 @@ void mxpanelorientation::on_buttonHelp_clicked()
 // backs up the current panel
 void mxpanelorientation::backupPanel()
 {
-    system("mkdir -p ~/.restore/.config/xfce4");
-    system("mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml");
-    system("cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4");
-    system("cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
+    system("mkdir -p ~/.restore/.config/xfce4; \
+           mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
+           cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
+           cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
 }
 
 // enable restore backup option if backup is present
