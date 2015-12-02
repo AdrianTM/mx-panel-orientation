@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 02 Dec 2015 17:29:37 -0500
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: source amd64
+Version: 15.12mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (15.12mx16) mx; urgency=medium
+ .
+   * new translations
+Checksums-Sha1:
+ 946116807c34b544c20bcb3c84a9272fcc0f15b8 1212 mx-panel-orientation_15.12mx16.dsc
+ 9c7cec8223ba7afab6929c459d3faf0d941aefd6 73960 mx-panel-orientation_15.12mx16.tar.xz
+ 47991b60de6c5a7976b771ff221f24400118a981 29442 mx-panel-orientation_15.12mx16_amd64.deb
+Checksums-Sha256:
+ b15314bca306783b20a547b482c379b0f8985093403f6371474b7f83bff523a0 1212 mx-panel-orientation_15.12mx16.dsc
+ 092309d6019b10b87fac93a487637b51fda7e6d149f8e77e9f4431aaefa3f7e3 73960 mx-panel-orientation_15.12mx16.tar.xz
+ 842d26eb45f9468601a2541dea97e18b50a1135da90381517dfa4be6f11e3a99 29442 mx-panel-orientation_15.12mx16_amd64.deb
+Files:
+ f3613f082b3d5905770e7dfc28a01499 1212 admin optional mx-panel-orientation_15.12mx16.dsc
+ 85941cec2229906b7056ebb851f42bf0 73960 admin optional mx-panel-orientation_15.12mx16.tar.xz
+ 51465a36406156ee13065ccd7805fbbb 29442 admin optional mx-panel-orientation_15.12mx16_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJWX3D4AAoJEHCTjHgGee6YwpgH/A4sTei+3aYdtlOY5/jwJwkk
+sLSuxN6oyIZfPKSvLM+NBFsIoP0PWXlVS9ntlBgzbzS24yH6Z/DGHCJWusxvKd+b
+XkUfRBc4Qn5ppm7dNxTOhCWJXqweHojQ+EzC9kKnOX2767hjjW3H+GGff1SvmSzy
+kw9VnBpqQN/s5EKQeCWtFSP48lKYxDT8UnfAubu86EqdfsIgAvWYcmzQ8B59Jw0y
+ogDmnqnzKvgzpl2NXMfsvCrbL+AEsaFB2TZBfKL+sQVUYwGsGhpWdGpQLlUihTS6
+iAngvhImdXeUC3nuJ5yLikwQkeURwb1AQdxoSgeUNPDh7je9dCrw/e0njT4sybY=
+=xro3
+-----END PGP SIGNATURE-----

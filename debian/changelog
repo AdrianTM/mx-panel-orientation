@@ -1,3 +1,9 @@
+mx-panel-orientation (15.12mx16) mx; urgency=medium
+
+  * new translations
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 02 Dec 2015 17:29:37 -0500
+
 mx-panel-orientation (0.15.12mx15) mx; urgency=medium
 
   * small fixes

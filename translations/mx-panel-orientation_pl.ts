@@ -1,10 +1,12 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="pl">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16,27 +18,27 @@
         <location filename="../mxpanelorientation.cpp" line="121"/>
         <location filename="../mxpanelorientation.cpp" line="128"/>
         <source>MX Panel Orientation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Select Panel Options</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>Display default panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Restore default configuration</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="43"/>
         <source>Restore backed up configuration</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="92"/>
@@ -93,18 +95,18 @@
         <location filename="../mxpanelorientation.cpp" line="89"/>
         <location filename="../mxpanelorientation.cpp" line="98"/>
         <source>Panel settings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="90"/>
         <location filename="../mxpanelorientation.cpp" line="99"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="113"/>
         <source>About MX Panel Orientation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="114"/>
@@ -114,7 +116,7 @@
     <message>
         <location filename="../mxpanelorientation.cpp" line="115"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="117"/>
