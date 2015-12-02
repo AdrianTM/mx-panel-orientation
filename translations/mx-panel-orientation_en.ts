@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="en" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation>Diese Anwendung muss als normaler Benutzer ausgeführt werden.</translation>
+        <translation>You must run this program as normal user.</translation>
     </message>
 </context>
 <context>
@@ -16,37 +16,37 @@
         <location filename="../mxpanelorientation.cpp" line="121"/>
         <location filename="../mxpanelorientation.cpp" line="128"/>
         <source>MX Panel Orientation</source>
-        <translation>MX Panel-Ausrichtung</translation>
+        <translation>MX Panel Orientation</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Select Panel Options</source>
-        <translation>Wähle Leisten-Optionen</translation>
+        <translation>Select Panel Options</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>Display default panel horizontally</source>
-        <translation>Voreinstellung für eine horizontale Leiste</translation>
+        <translation>Display default panel horizontally</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Restore default configuration</source>
-        <translation>Stelle die Voreinstellungen wieder her</translation>
+        <translation>Restore default configuration</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="43"/>
         <source>Restore backed up configuration</source>
-        <translation>Stelle die Sicherungskopie der Einstellungen wieder her</translation>
+        <translation>Restore backed up configuration</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="92"/>
         <source>Display help </source>
-        <translation>Hilfe anzeigen</translation>
+        <translation>Display help </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="95"/>
         <source>Help</source>
-        <translation>Hilfe</translation>
+        <translation>Help</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="102"/>
@@ -56,12 +56,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="131"/>
         <source>About this application</source>
-        <translation>Infos zu diesem Programm</translation>
+        <translation>About this application</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="134"/>
         <source>About...</source>
-        <translation>Über...</translation>
+        <translation>About...</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="141"/>
@@ -71,13 +71,13 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="173"/>
         <source>Quit application</source>
-        <translation>Anwendung beenden</translation>
+        <translation>Quit application</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="176"/>
         <location filename="../mxpanelorientation.cpp" line="118"/>
         <source>Cancel</source>
-        <translation>Abbrechen</translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="183"/>
@@ -87,34 +87,34 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="221"/>
         <source>Apply</source>
-        <translation>Anwenden</translation>
+        <translation>Apply</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="89"/>
         <location filename="../mxpanelorientation.cpp" line="98"/>
         <source>Panel settings</source>
-        <translation>Leisten-Einstellungen</translation>
+        <translation>Panel settings</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="90"/>
         <location filename="../mxpanelorientation.cpp" line="99"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Von Ihren aktuellen Leisten-Einstellungen wurde eine Sicherungskopie im versteckten Ornder namens .restore in Ihrem Home-Verzeichnis erstellt. (~/.restore/)</translation>
+        <translation> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="113"/>
         <source>About MX Panel Orientation</source>
-        <translation>Über MX Panel-Ausrichtung</translation>
+        <translation>About MX Panel Orientation</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="114"/>
         <source>Version: </source>
-        <translation>Version:</translation>
+        <translation>Version: </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="115"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation>Programm in MX Linux zum Ändern der Orientierung des Xfce-Panels (horizontal/vertikal)</translation>
+        <translation>Program for changing the Xfce panel orientation in MX Linux</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="117"/>
@@ -125,7 +125,7 @@
         <location filename="../mxpanelorientation.cpp" line="119"/>
         <location filename="../mxpanelorientation.cpp" line="121"/>
         <source>License</source>
-        <translation>Lizenz</translation>
+        <translation>License</translation>
     </message>
 </context>
 </TS>

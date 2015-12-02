@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el_GR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρέπει να τρέξετε αυτή την εφαρμογή ως κανονικός χρήστης</translation>
     </message>
 </context>
 <context>
@@ -18,116 +16,116 @@
         <location filename="../mxpanelorientation.cpp" line="121"/>
         <location filename="../mxpanelorientation.cpp" line="128"/>
         <source>MX Panel Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>MX Panel Orientation</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Select Panel Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλέξτε Επιλογές Panel</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>Display default panel horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Απεικόνιση οριζοντίως το προεπιλεγμένο Panel </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Restore default configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Επαναφορά προεπιλεγμένων ρυθμίσεων</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="43"/>
         <source>Restore backed up configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Επαναφορά ρυθμίσεων αντιγράφων ασφαλείας</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="92"/>
         <source>Display help </source>
-        <translation type="unfinished"></translation>
+        <translation>Δείτε Βοήθεια</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="95"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Βοήθεια </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="102"/>
         <source>Alt+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+H </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="131"/>
         <source>About this application</source>
-        <translation type="unfinished"></translation>
+        <translation>Περί εφαρμογής.</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="134"/>
         <source>About...</source>
-        <translation type="unfinished"></translation>
+        <translation>Περί</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="141"/>
         <source>Alt+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+B</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="173"/>
         <source>Quit application</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλείστε την εφαρμογή </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="176"/>
         <location filename="../mxpanelorientation.cpp" line="118"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Ακύρωση</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="183"/>
         <source>Alt+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="221"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Εφαρμογή</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="89"/>
         <location filename="../mxpanelorientation.cpp" line="98"/>
         <source>Panel settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμίσεις του Panel</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="90"/>
         <location filename="../mxpanelorientation.cpp" line="99"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι τρέχουσες ρυθμίσεις του Panel  σας δημιουργήσει αντίγραφα ασφαλείας σε έναν κρυφό φάκελο που ονομάζεται .restore στο φάκελο του σπιτιού σας (~/.restore /)</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="113"/>
         <source>About MX Panel Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Περί MX Panel Orientation</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="114"/>
         <source>Version: </source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση:</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="115"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόγραμμα για την αλλαγή του προσανατολισμού του πίνακα Xfce σε MX Linux</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="117"/>
         <source>Copyright (c) MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (c)  MX Linux </translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="119"/>
         <location filename="../mxpanelorientation.cpp" line="121"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Άδεια</translation>
     </message>
 </context>
 </TS>
