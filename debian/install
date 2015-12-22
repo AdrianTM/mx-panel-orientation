@@ -1,7 +1,6 @@
 mx-panel-orientation 		 usr/bin
 mx-panel-orientation.desktop	 usr/share/applications/mx
 translations/*.qm 	 usr/share/mx-panel-orientation/locale
-mx-panel-orientation.png	usr/share/pixmaps/mx
 mx-panel-orientation.png	usr/share/pixmaps
 icons/*                 usr/share/mx-panel-orientation/icons
 license.html            usr/share/doc/mx-panel-orientation

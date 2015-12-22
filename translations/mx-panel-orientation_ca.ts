@@ -14,9 +14,9 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="14"/>
         <location filename="../mxpanelorientation.cpp" line="48"/>
-        <location filename="../mxpanelorientation.cpp" line="114"/>
-        <location filename="../mxpanelorientation.cpp" line="121"/>
-        <location filename="../mxpanelorientation.cpp" line="128"/>
+        <location filename="../mxpanelorientation.cpp" line="115"/>
+        <location filename="../mxpanelorientation.cpp" line="122"/>
+        <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>MX Panel Orientation</source>
         <translation>MX Panel Orientació</translation>
     </message>
@@ -77,7 +77,7 @@
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="176"/>
-        <location filename="../mxpanelorientation.cpp" line="118"/>
+        <location filename="../mxpanelorientation.cpp" line="119"/>
         <source>Cancel</source>
         <translation>Cancel·la </translation>
     </message>
@@ -104,28 +104,28 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres actuals en una carpeta amagada anomenada .restore dins la vostra carpeta personal (~/.restore/) </translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="113"/>
+        <location filename="../mxpanelorientation.cpp" line="114"/>
         <source>About MX Panel Orientation</source>
         <translation>Quant a MX Panel Orientació</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="114"/>
+        <location filename="../mxpanelorientation.cpp" line="115"/>
         <source>Version: </source>
         <translation>Versió: </translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="115"/>
+        <location filename="../mxpanelorientation.cpp" line="116"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
         <translation>Programa per canviar l&apos;orientació del Quadre de Xfce a MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="117"/>
+        <location filename="../mxpanelorientation.cpp" line="118"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="119"/>
-        <location filename="../mxpanelorientation.cpp" line="121"/>
+        <location filename="../mxpanelorientation.cpp" line="120"/>
+        <location filename="../mxpanelorientation.cpp" line="122"/>
         <source>License</source>
         <translation>Llicència </translation>
     </message>

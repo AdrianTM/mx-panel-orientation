@@ -109,6 +109,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 // About button clicked
 void mxpanelorientation::on_buttonAbout_clicked()
 {
+    this->hide();
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Panel Orientation"), "<p align=\"center\"><b><h2>" +
                        tr("MX Panel Orientation") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
@@ -120,13 +121,16 @@ void mxpanelorientation::on_buttonAbout_clicked()
     if (msgBox.exec() == QMessageBox::RejectRole) {
         system("mx-viewer file:///usr/share/doc/mx-panel-orientation/license.html '" + tr("MX Panel Orientation").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
+    this->show();
 }
 
 // Help button clicked
 void mxpanelorientation::on_buttonHelp_clicked()
 {
+    this->hide();
     QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-panel-orientation '%1'").arg(tr("MX Panel Orientation"));
     system(cmd.toUtf8());
+    this->show();
 }
 
 // backs up the current panel

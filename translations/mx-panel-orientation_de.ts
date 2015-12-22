@@ -14,9 +14,9 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="14"/>
         <location filename="../mxpanelorientation.cpp" line="48"/>
-        <location filename="../mxpanelorientation.cpp" line="114"/>
-        <location filename="../mxpanelorientation.cpp" line="121"/>
-        <location filename="../mxpanelorientation.cpp" line="128"/>
+        <location filename="../mxpanelorientation.cpp" line="115"/>
+        <location filename="../mxpanelorientation.cpp" line="122"/>
+        <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>MX Panel Orientation</source>
         <translation>MX Panel-Ausrichtung</translation>
     </message>
@@ -77,7 +77,7 @@
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="176"/>
-        <location filename="../mxpanelorientation.cpp" line="118"/>
+        <location filename="../mxpanelorientation.cpp" line="119"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
@@ -104,28 +104,28 @@
         <translation>Von Ihren aktuellen Leisten-Einstellungen wurde eine Sicherungskopie im versteckten Ornder namens .restore in Ihrem Home-Verzeichnis erstellt. (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="113"/>
+        <location filename="../mxpanelorientation.cpp" line="114"/>
         <source>About MX Panel Orientation</source>
         <translation>Über MX Panel-Ausrichtung</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="114"/>
+        <location filename="../mxpanelorientation.cpp" line="115"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="115"/>
+        <location filename="../mxpanelorientation.cpp" line="116"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
         <translation>Programm in MX Linux zum Ändern der Orientierung des Xfce-Panels (horizontal/vertikal)</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="117"/>
+        <location filename="../mxpanelorientation.cpp" line="118"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="119"/>
-        <location filename="../mxpanelorientation.cpp" line="121"/>
+        <location filename="../mxpanelorientation.cpp" line="120"/>
+        <location filename="../mxpanelorientation.cpp" line="122"/>
         <source>License</source>
         <translation>Lizenz</translation>
     </message>

@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 22 Dec 2015 18:16:11 -0500
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: source amd64
+Version: 15.12.1mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (15.12.1mx15) mx; urgency=medium
+ .
+   * hide GUI when displaying help/license window
+Checksums-Sha1:
+ 5151ed76f16f61d2cbf8a3fb7abc0d544eb8c278 1223 mx-panel-orientation_15.12.1mx15.dsc
+ 1ad4092039fdebac86c5fff7777bd333c25f5bc5 158524 mx-panel-orientation_15.12.1mx15.tar.xz
+ 8a2a264fd66d74a7244bac08ffc2ae24b24f872d 29504 mx-panel-orientation_15.12.1mx15_amd64.deb
+Checksums-Sha256:
+ 3d8f15c3a666a75c6e086b0cde3b0f65f11561e7c8fc4f1c29847ba90a792413 1223 mx-panel-orientation_15.12.1mx15.dsc
+ d1ae9b3a06aa206efba143946854f0f362b10cfc1a1cfb90391c7081346a24e4 158524 mx-panel-orientation_15.12.1mx15.tar.xz
+ 312f7c025a1ab58dba1b4e6feccc6ceea405a4c1684b9575f62b53cea1126952 29504 mx-panel-orientation_15.12.1mx15_amd64.deb
+Files:
+ 6f8baa36fa94464262fb7c11a9c0fd79 1223 admin optional mx-panel-orientation_15.12.1mx15.dsc
+ a13e614c49f87ef8ccc710000ca053de 158524 admin optional mx-panel-orientation_15.12.1mx15.tar.xz
+ 7b16e1312f6d3838efa4a2d40e93ea1e 29504 admin optional mx-panel-orientation_15.12.1mx15_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJWedpsAAoJEHCTjHgGee6Y7GsH/2zGL7O70NBiAJem2Z65WnF3
+otNsVXWUAcBKWWI4Q8+4KIlqsoYKvd5CI9dKWoLViK3TGPggPME7FutS2/0ZH246
+wQw1WChIXsPNQH53eY4ELAno/PQJCJO1rSTEdcyT8POq9vBtqePS6FHbKJALD+p9
+lZmkjc4tglb8f+b1d4rJAFnyKhG8tZHSXLlI3YQbnch9MNtujtwcwWl88LN2Wy3b
+LPj7nWZqGhjPNMzyr7BoLQ3YazqcWvsuf0EIKCFftUIFT5Or4f3eL8zKLHviD6uN
+GuUJ4Wsi5CASjbBbfcSOqPyxRt48GoOkO40L5guhj6O100jpKqGl6VFGmvJ42gI=
+=tyEL
+-----END PGP SIGNATURE-----
