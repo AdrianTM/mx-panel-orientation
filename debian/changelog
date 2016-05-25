@@ -1,3 +1,9 @@
+mx-panel-orientation (16.5mx15) mx; urgency=medium
+
+  * new .desktop file
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sun, 22 May 2016 21:05:21 -0400
+
 mx-panel-orientation (15.12.1mx15) mx; urgency=medium
 
   * hide GUI when displaying help/license window
