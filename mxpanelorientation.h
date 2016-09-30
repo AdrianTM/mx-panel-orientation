@@ -59,8 +59,6 @@ public:
     QString output;
 
     void setup();
-    void backupPanel();
-    void checkBackup();
 
 public slots:
 

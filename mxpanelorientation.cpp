@@ -4,6 +4,7 @@
  * Copyright (C) 2015 MX Authors
  *
  * Authors: Adrian
+ *          Dophin Oracle
  *          MX & MEPIS Community <http://forum.mepiscommunity.org>
  *
  * This file is part of mx-panel-orientation.
@@ -47,7 +48,6 @@ void mxpanelorientation::setup()
     version = getVersion("mx-panel-orientation");
     this->setWindowTitle(tr("MX Panel Orientation"));
     this->adjustSize();
-    checkBackup();
 }
 
 
@@ -80,31 +80,229 @@ QString mxpanelorientation::getVersion(QString name)
 // Apply button clicked
 void mxpanelorientation::on_buttonApply_clicked()
 {
+    //read in plugin ID's
     if (ui->radioHorizontalPanel->isChecked()) {
-        backupPanel();
-        // copy template files
-        system("cp -Rf /usr/local/share/appdata/panels/horizontal/panel ~/.config/xfce4; \
-                cp -f /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-                pkill xfconfd; xfce4-panel -r");
-        QMessageBox::information(0, tr("Panel settings"),
-                                 tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
+        QString file_content;
+        QStringList pluginIDs;
+        file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids | grep -v Value | grep -v ^$").output;
+        pluginIDs = file_content.split("\n");
+        qDebug() << pluginIDs;
 
-    } else if (ui->radioVerticalPanel->isChecked()) {
-        backupPanel();
-        // copy template files
-        system("cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
-               cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-               pkill xfconfd; xfce4-panel -r ");
-        QMessageBox::information(0, tr("Panel settings"),
-                                 tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
-    } else if (ui->radioRestoreBackup->isChecked()) {
-        system("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
-                cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-                pkill xfconfd; xfce4-panel -r");
+
+        // figure out systrayID, and tasklistID
+
+        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "tasklist: " << tasklistID;
+
+        QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "systray: " << systrayID;
+
+        //get tasklist index in list
+        int tasklistindex = pluginIDs.indexOf(tasklistID);
+        qDebug() << "tasklistIDindex 1" << tasklistindex;
+
+        //check next plugin in list to see if its an expanding separator
+        int expsepindex = tasklistindex + 1;
+        qDebug() << "expsepindex" << expsepindex;
+        QString expsepID = pluginIDs.value(expsepindex);
+        qDebug() << "expsepID to test" << expsepID;
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
+        qDebug() << "test parm" << test;
+
+
+        //move the notification area (systray) to above window buttons (tasklist) in the list
+
+        pluginIDs.removeAll(systrayID);
+        tasklistindex = pluginIDs.indexOf(tasklistID);
+        qDebug() << "tasklistIDindex 2" << tasklistindex;
+        pluginIDs.insert(tasklistindex, systrayID);
+        qDebug() << "reordered list" << pluginIDs;
+
+        //move the expanding separator
+
+        if (test == "true") {
+            pluginIDs.removeAll(expsepID);
+            tasklistindex = pluginIDs.indexOf(tasklistID);
+            qDebug() << "tasklistIDindex 2" << tasklistindex;
+            pluginIDs.insert(tasklistindex, expsepID);
+            qDebug() << "reordered list" << pluginIDs;
+        }
+
+        //now reverse the list
+
+        std::reverse(pluginIDs.begin(), pluginIDs.end());
+        qDebug() << "reversed list" << pluginIDs;
+
+        //now build xfconf command
+
+        QStringListIterator changeIterator(pluginIDs);
+        QString cmdstring;
+        while (changeIterator.hasNext()) {
+            QString value = changeIterator.next();
+            cmdstring = QString(cmdstring + "-s " + value + " ");
+            qDebug() << cmdstring;
+        }
+
+        //flip the panel plugins
+
+        runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids " + cmdstring);
+
+        //change orientation to horizontal
+
+        system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 0");
+
+        //change mode of window buttons
+
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
+
+        //restart xfce4-panel
+
+        system("xfce4-panel -r");
+
+
     }
-    qApp->quit();
-}
+    if (ui->radioVerticalPanel->isChecked()) {
+        QString file_content;
+        QStringList pluginIDs;
+        file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids | grep -v Value | grep -v ^$").output;
+        pluginIDs = file_content.split("\n");
+        qDebug() << pluginIDs;
 
+
+        // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
+
+        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "tasklist: " << tasklistID;
+
+        QString whiskerID = runCmd("grep whisker ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        whiskerID=whiskerID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "whisker: " << whiskerID;
+
+        QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "systray: " << systrayID;
+
+        QString pagerID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        pagerID=pagerID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "pager: " << pagerID;
+
+        QString appmenuID = runCmd("grep applicationmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        appmenuID=appmenuID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "appmenuID: " << appmenuID;
+
+        //get tasklist index in list
+        int tasklistindex = pluginIDs.indexOf(tasklistID);
+        qDebug() << "tasklistIDindex 1" << tasklistindex;
+
+        //check next plugin in list to see if its an expanding separator
+        int expsepindex = tasklistindex + 1;
+        qDebug() << "expsepindex" << expsepindex;
+        QString expsepID = pluginIDs.value(expsepindex);
+        qDebug() << "expsepID to test" << expsepID;
+        QString testexpandsep = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
+        qDebug() << "test parm" << testexpandsep;
+
+
+        //move the notification area (systray) to an appropriate area.
+
+        //1.  determine if menu is present, place in front of menu
+
+        QString switchID;
+        if (whiskerID != "") {
+            switchID = whiskerID;
+            qDebug() << "switchID whisker: " << switchID;
+        } else {
+            if (appmenuID != "") {
+                switchID = appmenuID;
+                qDebug() << "switchID appmenu: " << switchID;
+            }
+        }
+
+        //2.  if so, check second plugin is separator, if so place in front of separator
+
+        if (switchID != "") {
+            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
+            if (test == "separator") {
+                qDebug() << "test parm" << test;
+                switchID = pluginIDs.value(1);
+                qDebug() << "switchID sep: " << switchID;
+            }
+        }
+
+        //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
+
+        if (switchID != ""){
+            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(2)).output;
+            if (test == "pager") {
+                qDebug() << "test parm" << test;
+                switchID = pluginIDs.value(2);
+                qDebug() << "switchID pager: " << switchID;
+            }
+        }
+
+        // give a default value that is sane but might not be correct
+
+        if (switchID == "") {
+            switchID = pluginIDs.value(1);
+            qDebug() << "switchID default: " << switchID;
+        }
+
+
+        //4.  move the systray
+
+        pluginIDs.removeAll(systrayID);
+        int switchindex = pluginIDs.indexOf(switchID) + 1;
+        qDebug() << "switchindex" << switchindex;
+        pluginIDs.insert(switchindex, systrayID);
+        qDebug() << "reordered list" << pluginIDs;
+
+        //move the expanding separator
+
+        if (testexpandsep == "true") {
+            pluginIDs.removeAll(expsepID);
+            tasklistindex = pluginIDs.indexOf(tasklistID);
+            qDebug() << "tasklistIDindex 2" << tasklistindex;
+            pluginIDs.insert(tasklistindex, expsepID);
+            qDebug() << "reordered list" << pluginIDs;
+        }
+
+        //now reverse the list
+
+        std::reverse(pluginIDs.begin(), pluginIDs.end());
+        qDebug() << "reversed list" << pluginIDs;
+
+        //now build xfconf command
+
+        QStringListIterator changeIterator(pluginIDs);
+        QString cmdstring;
+        while (changeIterator.hasNext()) {
+            QString value = changeIterator.next();
+            cmdstring = QString(cmdstring + "-s " + value + " ");
+            qDebug() << cmdstring;
+        }
+
+        //flip the panel plugins
+
+        runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids " + cmdstring);
+
+        //change orientation to vertical
+
+        system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 2");
+
+        //change mode of window buttons
+
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
+
+        //restart xfce4-panel
+
+        system("xfce4-panel -r");
+
+    }
+
+}
 
 // About button clicked
 void mxpanelorientation::on_buttonAbout_clicked()
@@ -131,24 +329,4 @@ void mxpanelorientation::on_buttonHelp_clicked()
     QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-panel-orientation '%1'").arg(tr("MX Panel Orientation"));
     system(cmd.toUtf8());
     this->show();
-}
-
-// backs up the current panel
-void mxpanelorientation::backupPanel()
-{
-    system("mkdir -p ~/.restore/.config/xfce4; \
-           mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
-           cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
-           cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
-}
-
-// enable restore backup option if backup is present
-void mxpanelorientation::checkBackup()
-{
-    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-    if (system(cmd.toUtf8()) == 0) {
-        ui->radioRestoreBackup->setEnabled(true);
-    } else {
-        ui->radioRestoreBackup->setEnabled(false);
-    }
 }

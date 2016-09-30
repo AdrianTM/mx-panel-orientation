@@ -1,3 +1,10 @@
+mx-panel-orientation (16.5mx15+nmu1) UNRELEASED; urgency=medium
+
+  * very ugly alpha of new app
+  * 
+
+ -- dolphinoracle <dolphinoracle@gmaile.com>  Fri, 30 Sep 2016 14:20:33 -0400
+
 mx-panel-orientation (16.5mx15) mx; urgency=medium
 
   * new .desktop file
