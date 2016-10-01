@@ -88,48 +88,92 @@ void mxpanelorientation::on_buttonApply_clicked()
         pluginIDs = file_content.split("\n");
         qDebug() << pluginIDs;
 
+        // figure out moving the systray, if it exists
 
         // figure out systrayID, and tasklistID
-
-        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
-        qDebug() << "tasklist: " << tasklistID;
 
         QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
         systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
         qDebug() << "systray: " << systrayID;
 
-        //get tasklist index in list
-        int tasklistindex = pluginIDs.indexOf(tasklistID);
-        qDebug() << "tasklistIDindex 1" << tasklistindex;
+        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "tasklist: " << tasklistID;
 
-        //check next plugin in list to see if its an expanding separator
-        int expsepindex = tasklistindex + 1;
-        qDebug() << "expsepindex" << expsepindex;
-        QString expsepID = pluginIDs.value(expsepindex);
-        qDebug() << "expsepID to test" << expsepID;
-        QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
-        qDebug() << "test parm" << test;
+        // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
+
+        if (systrayID !=""){
+
+            //get tasklist index in list
+            int tasklistindex = pluginIDs.indexOf(tasklistID);
+            qDebug() << "tasklistIDindex 1" << tasklistindex;
+
+            //check next plugin in list to see if its an expanding separator
+            int expsepindex = tasklistindex + 1;
+            qDebug() << "expsepindex" << expsepindex;
+            QString expsepID = pluginIDs.value(expsepindex);
+            qDebug() << "expsepID to test" << expsepID;
+            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
+            qDebug() << "test parm" << test;
 
 
-        //move the notification area (systray) to above window buttons (tasklist) in the list
+            //move the notification area (systray) to above window buttons (tasklist) in the list if tasklist exists
 
-        pluginIDs.removeAll(systrayID);
-        tasklistindex = pluginIDs.indexOf(tasklistID);
-        qDebug() << "tasklistIDindex 2" << tasklistindex;
-        pluginIDs.insert(tasklistindex, systrayID);
-        qDebug() << "reordered list" << pluginIDs;
+            if (tasklistID !="") {
+                pluginIDs.removeAll(systrayID);
+                tasklistindex = pluginIDs.indexOf(tasklistID);
+                qDebug() << "tasklistIDindex 2" << tasklistindex;
+                pluginIDs.insert(tasklistindex, systrayID);
+                qDebug() << "reordered list" << pluginIDs;
 
-        //move the expanding separator
+                //move the expanding separator
 
-        if (test == "true") {
-            pluginIDs.removeAll(expsepID);
-            tasklistindex = pluginIDs.indexOf(tasklistID);
-            qDebug() << "tasklistIDindex 2" << tasklistindex;
-            pluginIDs.insert(tasklistindex, expsepID);
-            qDebug() << "reordered list" << pluginIDs;
+                if (test == "true") {
+                    pluginIDs.removeAll(expsepID);
+                    tasklistindex = pluginIDs.indexOf(tasklistID);
+                    qDebug() << "tasklistIDindex 2" << tasklistindex;
+                    pluginIDs.insert(tasklistindex, expsepID);
+                    qDebug() << "reordered list" << pluginIDs;
+                }
+            }
+
+            //if the tasklist isn't present, try to make a decision about where to put the systray
+            if (tasklistID == "") {
+
+
+                //try to move to in front of clock
+
+                QString clockID = runCmd("grep clock ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+                QString switchID;
+                clockID=clockID.remove("\"").section("-",1,1).section(" ",0,0);
+                qDebug() << "clockID: " << clockID;
+                if (clockID != "") {
+                    switchID = clockID;
+
+                    //check if next plugin down is a separator and if so put it there
+
+                    int clocksepindex = pluginIDs.indexOf(clockID) + 1;
+                    QString clocksepcheck = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(clocksepindex)).output;
+                    qDebug() << "clocksepcheck: " << clocksepcheck;
+                    if (clocksepcheck == "separator") {
+                        switchID = pluginIDs.value(clocksepindex);
+                    }
+
+                    // if there is no clock, put it near the end and hope for the best
+
+                } else {
+                    switchID = pluginIDs.value(1);
+                }
+
+                // make the move
+                int switchIDindex;
+                pluginIDs.removeAll(systrayID);
+                switchIDindex = pluginIDs.indexOf(switchID) + 1;
+                qDebug() << "switchIDindex 2" << switchIDindex;
+                pluginIDs.insert(switchIDindex, systrayID);
+                qDebug() << "reordered list" << pluginIDs;
+            }
         }
-
         //now reverse the list
 
         std::reverse(pluginIDs.begin(), pluginIDs.end());
@@ -153,16 +197,17 @@ void mxpanelorientation::on_buttonApply_clicked()
 
         system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 0");
 
-        //change mode of window buttons
+        //change mode of window buttons if they exist
 
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
+        if (tasklistID != "") {
+            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
+        }
 
         //restart xfce4-panel
 
-        system("xfce4-panel -r");
-
-
+        system("xfce4-panel -r");a
     }
+
     if (ui->radioVerticalPanel->isChecked()) {
         QString file_content;
         QStringList pluginIDs;
@@ -171,102 +216,109 @@ void mxpanelorientation::on_buttonApply_clicked()
         qDebug() << pluginIDs;
 
 
-        // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
-
-        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
-        qDebug() << "tasklist: " << tasklistID;
-
-        QString whiskerID = runCmd("grep whisker ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        whiskerID=whiskerID.remove("\"").section("-",1,1).section(" ",0,0);
-        qDebug() << "whisker: " << whiskerID;
+        // figure out moving the systray, if it exists
 
         QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
         systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
         qDebug() << "systray: " << systrayID;
 
-        QString pagerID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        pagerID=pagerID.remove("\"").section("-",1,1).section(" ",0,0);
-        qDebug() << "pager: " << pagerID;
+        QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "tasklist: " << tasklistID;
 
-        QString appmenuID = runCmd("grep applicationmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        appmenuID=appmenuID.remove("\"").section("-",1,1).section(" ",0,0);
-        qDebug() << "appmenuID: " << appmenuID;
+        //if systray exists, do a bunch of stuff to try to move it in a logical way
 
-        //get tasklist index in list
-        int tasklistindex = pluginIDs.indexOf(tasklistID);
-        qDebug() << "tasklistIDindex 1" << tasklistindex;
+        if (systrayID !=""){
 
-        //check next plugin in list to see if its an expanding separator
-        int expsepindex = tasklistindex + 1;
-        qDebug() << "expsepindex" << expsepindex;
-        QString expsepID = pluginIDs.value(expsepindex);
-        qDebug() << "expsepID to test" << expsepID;
-        QString testexpandsep = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
-        qDebug() << "test parm" << testexpandsep;
+            // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
+
+            QString whiskerID = runCmd("grep whisker ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+            whiskerID=whiskerID.remove("\"").section("-",1,1).section(" ",0,0);
+            qDebug() << "whisker: " << whiskerID;
+
+            QString pagerID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+            pagerID=pagerID.remove("\"").section("-",1,1).section(" ",0,0);
+            qDebug() << "pager: " << pagerID;
+
+            QString appmenuID = runCmd("grep applicationmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+            appmenuID=appmenuID.remove("\"").section("-",1,1).section(" ",0,0);
+            qDebug() << "appmenuID: " << appmenuID;
+
+            //get tasklist index in list
+            int tasklistindex = pluginIDs.indexOf(tasklistID);
+            qDebug() << "tasklistIDindex 1" << tasklistindex;
+
+            //check next plugin in list to see if its an expanding separator
+            int expsepindex = tasklistindex + 1;
+            qDebug() << "expsepindex" << expsepindex;
+            QString expsepID = pluginIDs.value(expsepindex);
+            qDebug() << "expsepID to test" << expsepID;
+            QString testexpandsep = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + expsepID + "/expand").output;
+            qDebug() << "test parm" << testexpandsep;
 
 
-        //move the notification area (systray) to an appropriate area.
+            //move the notification area (systray) to an appropriate area.
 
-        //1.  determine if menu is present, place in front of menu
+            //1.  determine if menu is present, place in front of menu
 
-        QString switchID;
-        if (whiskerID != "") {
-            switchID = whiskerID;
-            qDebug() << "switchID whisker: " << switchID;
-        } else {
-            if (appmenuID != "") {
-                switchID = appmenuID;
-                qDebug() << "switchID appmenu: " << switchID;
+            QString switchID;
+            if (whiskerID != "") {
+                switchID = whiskerID;
+                qDebug() << "switchID whisker: " << switchID;
+            } else {
+                if (appmenuID != "") {
+                    switchID = appmenuID;
+                    qDebug() << "switchID appmenu: " << switchID;
+                }
             }
-        }
 
-        //2.  if so, check second plugin is separator, if so place in front of separator
+            //2.  if so, check second plugin is separator, if so place in front of separator
 
-        if (switchID != "") {
-            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
-            if (test == "separator") {
-                qDebug() << "test parm" << test;
+            if (switchID != "") {
+                QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
+                if (test == "separator") {
+                    qDebug() << "test parm" << test;
+                    switchID = pluginIDs.value(1);
+                    qDebug() << "switchID sep: " << switchID;
+                }
+            }
+
+            //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
+
+            if (switchID != ""){
+                QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(2)).output;
+                if (test == "pager") {
+                    qDebug() << "test parm" << test;
+                    switchID = pluginIDs.value(2);
+                    qDebug() << "switchID pager: " << switchID;
+                }
+            }
+
+            // give a default value that is sane but might not be correct
+
+            if (switchID == "") {
                 switchID = pluginIDs.value(1);
-                qDebug() << "switchID sep: " << switchID;
+                qDebug() << "switchID default: " << switchID;
             }
-        }
-
-        //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
-
-        if (switchID != ""){
-            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(2)).output;
-            if (test == "pager") {
-                qDebug() << "test parm" << test;
-                switchID = pluginIDs.value(2);
-                qDebug() << "switchID pager: " << switchID;
-            }
-        }
-
-        // give a default value that is sane but might not be correct
-
-        if (switchID == "") {
-            switchID = pluginIDs.value(1);
-            qDebug() << "switchID default: " << switchID;
-        }
 
 
-        //4.  move the systray
+            //4.  move the systray
 
-        pluginIDs.removeAll(systrayID);
-        int switchindex = pluginIDs.indexOf(switchID) + 1;
-        qDebug() << "switchindex" << switchindex;
-        pluginIDs.insert(switchindex, systrayID);
-        qDebug() << "reordered list" << pluginIDs;
-
-        //move the expanding separator
-
-        if (testexpandsep == "true") {
-            pluginIDs.removeAll(expsepID);
-            tasklistindex = pluginIDs.indexOf(tasklistID);
-            qDebug() << "tasklistIDindex 2" << tasklistindex;
-            pluginIDs.insert(tasklistindex, expsepID);
+            pluginIDs.removeAll(systrayID);
+            int switchindex = pluginIDs.indexOf(switchID) + 1;
+            qDebug() << "switchindex" << switchindex;
+            pluginIDs.insert(switchindex, systrayID);
             qDebug() << "reordered list" << pluginIDs;
+
+            //move the expanding separator
+
+            if (testexpandsep == "true") {
+                pluginIDs.removeAll(expsepID);
+                tasklistindex = pluginIDs.indexOf(tasklistID);
+                qDebug() << "tasklistIDindex 2" << tasklistindex;
+                pluginIDs.insert(tasklistindex, expsepID);
+                qDebug() << "reordered list" << pluginIDs;
+            }
         }
 
         //now reverse the list
@@ -292,9 +344,11 @@ void mxpanelorientation::on_buttonApply_clicked()
 
         system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 2");
 
-        //change mode of window buttons
+        //change mode of window buttons if they exist
 
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
+        if (tasklistID != "") {
+            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
+        }
 
         //restart xfce4-panel
 
