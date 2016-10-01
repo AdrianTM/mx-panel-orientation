@@ -138,10 +138,11 @@ void mxpanelorientation::on_buttonApply_clicked()
             }
 
             //if the tasklist isn't present, try to make a decision about where to put the systray
+
             if (tasklistID == "") {
 
 
-                //try to move to in front of clock
+                //try to move to in front of clock if present
 
                 QString clockID = runCmd("grep clock ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
                 QString switchID;
@@ -150,7 +151,7 @@ void mxpanelorientation::on_buttonApply_clicked()
                 if (clockID != "") {
                     switchID = clockID;
 
-                    //check if next plugin down is a separator and if so put it there
+                    //if clock found check if next plugin down is a separator and if so put it there
 
                     int clocksepindex = pluginIDs.indexOf(clockID) + 1;
                     QString clocksepcheck = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(clocksepindex)).output;
@@ -165,7 +166,8 @@ void mxpanelorientation::on_buttonApply_clicked()
                     switchID = pluginIDs.value(1);
                 }
 
-                // make the move
+                // move the systray
+
                 int switchIDindex;
                 pluginIDs.removeAll(systrayID);
                 switchIDindex = pluginIDs.indexOf(switchID) + 1;
@@ -197,7 +199,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 
         system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 0");
 
-        //change mode of window buttons if they exist
+        //change mode of tasklist labels if it exists
 
         if (tasklistID != "") {
             runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
@@ -205,7 +207,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 
         //restart xfce4-panel
 
-        system("xfce4-panel -r");a
+        system("xfce4-panel -r");
     }
 
     if (ui->radioVerticalPanel->isChecked()) {
@@ -294,7 +296,7 @@ void mxpanelorientation::on_buttonApply_clicked()
                 }
             }
 
-            // give a default value that is sane but might not be correct
+            // if the menu doesn't exist, give a default value that is sane but might not be correct
 
             if (switchID == "") {
                 switchID = pluginIDs.value(1);
@@ -344,7 +346,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 
         system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 2");
 
-        //change mode of window buttons if they exist
+        //change mode of tasklist labels if they exist
 
         if (tasklistID != "") {
             runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
