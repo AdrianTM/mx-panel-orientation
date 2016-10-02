@@ -59,6 +59,13 @@ public:
     QString output;
 
     void setup();
+    void setupuiselections();
+    void fliptohorizontal();
+    void fliptovertical();
+    void backupPanel();
+    void restoreDefaultPanel();
+    void restoreBackup();
+    void message();
 
 public slots:
 
