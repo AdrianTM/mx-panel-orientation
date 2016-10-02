@@ -35,8 +35,12 @@ mxpanelorientation::mxpanelorientation(QWidget *parent) :
 {
     ui->setupUi(this);
     setup();
+    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    if (system(cmd.toUtf8()) != 0) {
+        backupPanel();
+        message();
+    }
 }
-
 mxpanelorientation::~mxpanelorientation()
 {
     delete ui;
@@ -92,7 +96,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
-        }
+    }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
@@ -140,11 +144,24 @@ void mxpanelorientation::setupuiselections()
 {
     //reset all radio buttons to unchecked
 
+    ui->radioHorizontalPanel->setAutoExclusive(false);
+    ui->radioVerticalPanel->setAutoExclusive(false);
+    ui->radioBackupPanel->setAutoExclusive(false);
+    ui->radioDefaultPanel->setAutoExclusive(false);
+    ui->radioRestoreBackup->setAutoExclusive(false);
+
     ui->radioHorizontalPanel->setChecked(false);
     ui->radioVerticalPanel->setChecked(false);
     ui->radioBackupPanel->setChecked(false);
     ui->radioDefaultPanel->setChecked(false);
     ui->radioRestoreBackup->setChecked(false);
+
+    ui->radioHorizontalPanel->setAutoExclusive(true);
+    ui->radioVerticalPanel->setAutoExclusive(true);
+    ui->radioBackupPanel->setAutoExclusive(true);
+    ui->radioDefaultPanel->setAutoExclusive(true);
+    ui->radioRestoreBackup->setAutoExclusive(true);
+
 
     //only enable options that make sense
 
@@ -168,6 +185,11 @@ void mxpanelorientation::setupuiselections()
         ui->radioRestoreBackup->setEnabled(false);
     }
 
+    //set initial value of spinbox Row Height
+
+    QString rowheight = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/size").output;
+    int rw = rowheight.toInt();
+    ui->spinRowHeight->setValue(rw);
 }
 
 void mxpanelorientation::fliptohorizontal()
@@ -455,8 +477,8 @@ void mxpanelorientation::backupPanel()
 {
     system("mkdir -p ~/.restore/.config/xfce4; \
            mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
-           cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
-           cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
+            cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
+    cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
 }
 
 void mxpanelorientation::restoreDefaultPanel()
@@ -477,5 +499,13 @@ void mxpanelorientation::restoreBackup()
 void mxpanelorientation::message()
 {
     QMessageBox::information(0, tr("Panel settings"),
-                          tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
+                             tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
+}
+
+
+
+void mxpanelorientation::on_spinRowHeight_valueChanged(const QString &arg1)
+{
+    QString cmd = "xfconf-query -c xfce4-panel -p /panels/panel-1/size -s " + arg1;
+    system(cmd.toUtf8());
 }

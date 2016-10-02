@@ -75,6 +75,9 @@ private slots:
     void on_buttonAbout_clicked();
     void on_buttonHelp_clicked();
 
+
+    void on_spinRowHeight_valueChanged(const QString &arg1);
+
 private:
     Ui::mxpanelorientation *ui;
 };
