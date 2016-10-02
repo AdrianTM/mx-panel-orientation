@@ -57,6 +57,7 @@ public:
 
     QString version;
     QString output;
+    QString panel;
 
     void setup();
     void setupuiselections();
@@ -66,6 +67,7 @@ public:
     void restoreDefaultPanel();
     void restoreBackup();
     void message();
+    void whichpanel();
 
 public slots:
 

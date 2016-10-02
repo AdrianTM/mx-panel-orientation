@@ -52,7 +52,9 @@ void mxpanelorientation::setup()
     version = getVersion("mx-panel-orientation");
     this->setWindowTitle(tr("MX Panel Orientation"));
     this->adjustSize();
+    whichpanel();
     setupuiselections();
+
 }
 
 
@@ -96,10 +98,12 @@ void mxpanelorientation::on_buttonApply_clicked()
 
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
+        whichpanel();
     }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
+        whichpanel();
     }
 
     if (ui->radioBackupPanel->isChecked()) {
@@ -167,11 +171,22 @@ void mxpanelorientation::setupuiselections()
 
     //if panel is already horizontal, set vertical option available, and vice versa
 
-    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/mode").output;
+    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+    qDebug() << test;
+    if (test == "") {
+        ui->radioVerticalPanel->setEnabled(true);
+        ui->radioHorizontalPanel->setEnabled(false);
+    }
     if (test == "0") {
         ui->radioVerticalPanel->setEnabled(true);
         ui->radioHorizontalPanel->setEnabled(false);
-    } else {
+    }
+    if (test == "1") {
+        ui->radioVerticalPanel->setEnabled(false);
+        ui->radioHorizontalPanel->setEnabled(true);
+    }
+
+    if (test == "2") {
         ui->radioVerticalPanel->setEnabled(false);
         ui->radioHorizontalPanel->setEnabled(true);
     }
@@ -187,7 +202,7 @@ void mxpanelorientation::setupuiselections()
 
     //set initial value of spinbox Row Height
 
-    QString rowheight = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/size").output;
+    QString rowheight = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/size").output;
     int rw = rowheight.toInt();
     ui->spinRowHeight->setValue(rw);
 }
@@ -196,7 +211,7 @@ void mxpanelorientation::fliptohorizontal()
 {
     QString file_content;
     QStringList pluginIDs;
-    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids | grep -v Value | grep -v ^$").output;
+    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
     pluginIDs = file_content.split("\n");
     qDebug() << pluginIDs;
 
@@ -305,11 +320,11 @@ void mxpanelorientation::fliptohorizontal()
 
     //flip the panel plugins and hold on, it could be a bumpy ride
 
-    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids " + cmdstring);
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids " + cmdstring);
 
     //change orientation to horizontal
 
-    system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 0");
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode -s 0");
 
     //change mode of tasklist labels if it exists
 
@@ -327,7 +342,7 @@ void mxpanelorientation::fliptovertical()
 {
     QString file_content;
     QStringList pluginIDs;
-    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids | grep -v Value | grep -v ^$").output;
+    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
     pluginIDs = file_content.split("\n");
     qDebug() << pluginIDs;
 
@@ -455,11 +470,11 @@ void mxpanelorientation::fliptovertical()
     //flip the panel plugins and pray for a miracle
 
 
-    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids " + cmdstring);
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids " + cmdstring);
 
     //change orientation to vertical
 
-    system("xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s 2");
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/mode -n -t int -s 2");
 
     //change mode of tasklist labels if they exist
 
@@ -506,6 +521,17 @@ void mxpanelorientation::message()
 
 void mxpanelorientation::on_spinRowHeight_valueChanged(const QString &arg1)
 {
-    QString cmd = "xfconf-query -c xfce4-panel -p /panels/panel-1/size -s " + arg1;
+    QString cmd = "xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/size -s " + arg1;
     system(cmd.toUtf8());
+}
+
+void mxpanelorientation::whichpanel()
+{
+    // take the first panel we see as default
+    QString panel_content;
+    QStringList panelIDs;
+    panel_content = runCmd("xfconf-query -c xfce4-panel -p /panels | grep -v Value | grep -v ^$").output;
+    panelIDs = panel_content.split("\n");
+    panel = panelIDs.value(0);
+    qDebug() << "panel to use: " << panel;
 }
