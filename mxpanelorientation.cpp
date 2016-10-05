@@ -371,7 +371,7 @@ void mxpanelorientation::fliptovertical()
         pagerID=pagerID.remove("\"").section("-",1,1).section(" ",0,0);
         qDebug() << "pager: " << pagerID;
 
-        QString appmenuID = runCmd("grep applicationmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        QString appmenuID = runCmd("grep applicationsmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
         appmenuID=appmenuID.remove("\"").section("-",1,1).section(" ",0,0);
         qDebug() << "appmenuID: " << appmenuID;
 
