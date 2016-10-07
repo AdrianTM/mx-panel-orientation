@@ -202,9 +202,9 @@ void mxpanelorientation::setupuiselections()
 
     //set initial value of spinbox Row Height
 
-    QString rowheight = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/size").output;
-    int rw = rowheight.toInt();
-    ui->spinRowHeight->setValue(rw);
+//    QString rowheight = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/size").output;
+//    int rw = rowheight.toInt();
+//    ui->spinRowHeight->setValue(rw);
 }
 
 void mxpanelorientation::fliptohorizontal()
