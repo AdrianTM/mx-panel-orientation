@@ -60,14 +60,14 @@ public:
     QString panel;
 
     void setup();
-    void setupuiselections();
-    void fliptohorizontal();
-    void fliptovertical();
+    void setupUiSelections();
+    void flipToHorizontal();
+    void flipToVertical();
     void backupPanel();
     void restoreDefaultPanel();
     void restoreBackup();
     void message();
-    void whichpanel();
+    void whichPanel();
 
 public slots:
 
