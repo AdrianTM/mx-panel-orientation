@@ -52,8 +52,8 @@ void mxpanelorientation::setup()
     version = getVersion("mx-panel-orientation");
     this->setWindowTitle(tr("MX Panel Orientation"));
     this->adjustSize();
-    whichpanel();
-    setupuiselections();
+    whichPanel();
+    setupUiSelections();
 
 }
 
@@ -89,25 +89,25 @@ void mxpanelorientation::on_buttonApply_clicked()
 {
     //read in plugin ID's
     if (ui->radioHorizontalPanel->isChecked()) {
-        fliptohorizontal();
+        flipToHorizontal();
         system("sleep .5");
     }
 
     if (ui->radioVerticalPanel->isChecked()) {
-        fliptovertical();
+        flipToVertical();
         system("sleep .5");
     }
 
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
         system("sleep .5");
-        whichpanel();
+        whichPanel();
     }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
         system("sleep .5");
-        whichpanel();
+        whichPanel();
     }
 
     if (ui->radioBackupPanel->isChecked()) {
@@ -117,7 +117,7 @@ void mxpanelorientation::on_buttonApply_clicked()
 
     // reset gui
 
-    setupuiselections();
+    setupUiSelections();
 
 }
 
@@ -148,7 +148,7 @@ void mxpanelorientation::on_buttonHelp_clicked()
     this->show();
 }
 
-void mxpanelorientation::setupuiselections()
+void mxpanelorientation::setupUiSelections()
 {
     //reset all radio buttons to unchecked
 
@@ -211,7 +211,7 @@ void mxpanelorientation::setupuiselections()
 //    ui->spinRowHeight->setValue(rw);
 }
 
-void mxpanelorientation::fliptohorizontal()
+void mxpanelorientation::flipToHorizontal()
 {
     QString file_content;
     QStringList pluginIDs;
@@ -233,7 +233,7 @@ void mxpanelorientation::fliptohorizontal()
 
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
-    if (systrayID !=""){
+    if (systrayID != ""){
 
         //get tasklist index in list
         int tasklistindex = pluginIDs.indexOf(tasklistID);
@@ -250,7 +250,7 @@ void mxpanelorientation::fliptohorizontal()
 
         //move the notification area (systray) to above window buttons (tasklist) in the list if tasklist exists
 
-        if (tasklistID !="") {
+        if (tasklistID != "") {
             pluginIDs.removeAll(systrayID);
             tasklistindex = pluginIDs.indexOf(tasklistID);
             qDebug() << "tasklistIDindex 2" << tasklistindex;
@@ -342,7 +342,7 @@ void mxpanelorientation::fliptohorizontal()
 
 }
 
-void mxpanelorientation::fliptovertical()
+void mxpanelorientation::flipToVertical()
 {
     QString file_content;
     QStringList pluginIDs;
@@ -363,7 +363,7 @@ void mxpanelorientation::fliptovertical()
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
-    if (systrayID !=""){
+    if (systrayID != ""){
 
         // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
 
@@ -529,7 +529,7 @@ void mxpanelorientation::on_spinRowHeight_valueChanged(const QString &arg1)
     system(cmd.toUtf8());
 }
 
-void mxpanelorientation::whichpanel()
+void mxpanelorientation::whichPanel()
 {
     // take the first panel we see as default
     QString panel_content;
