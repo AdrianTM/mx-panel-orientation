@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Sun, 02 Oct 2016 21:10:33 -0400
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: source amd64
+Version: 16.10mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (16.10mx15) mx; urgency=medium
+ .
+   * brand new test version
+   *
+Checksums-Sha1:
+ f7a9d143a7114e755525b2e4debd6b7517947ebd 691 mx-panel-orientation_16.10mx15.dsc
+ 172bdc24a45c257262269cf2b877eccde30030fd 31316 mx-panel-orientation_16.10mx15.tar.xz
+ 5dcc2e91ac003106853661038bac13ec344f4c44 46090 mx-panel-orientation_16.10mx15_amd64.deb
+Checksums-Sha256:
+ f6a64d8a0031da86412869bc01f3dab98d086fe1efa50c493a8e6abfc0f98aa5 691 mx-panel-orientation_16.10mx15.dsc
+ 0ae9a3821d269fbe80ac1f58169cad82d9bd8530b9d69d40da162323d09fc3d1 31316 mx-panel-orientation_16.10mx15.tar.xz
+ 3cc5ffac865274e19f2ac72b2dfbbe239fccd662f3da58cf5a502555e30c4d89 46090 mx-panel-orientation_16.10mx15_amd64.deb
+Files:
+ 4d3457cddb2ca0089437b8cb7119c7a6 691 admin optional mx-panel-orientation_16.10mx15.dsc
+ 70edf0862c1d92cb8beb8e0aa255bc89 31316 admin optional mx-panel-orientation_16.10mx15.tar.xz
+ 16ba506f9fd0eb72f8e9e63a88a654ea 46090 admin optional mx-panel-orientation_16.10mx15_amd64.deb

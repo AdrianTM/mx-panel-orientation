@@ -6,236 +6,246 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
-    <height>191</height>
+    <width>476</width>
+    <height>295</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MX Panel Orientation</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
+   <item row="0" column="0" colspan="6">
     <widget class="QGroupBox" name="groupPanel">
      <property name="title">
-      <string>Select Panel Options</string>
+      <string>Panel Options</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
        <widget class="QRadioButton" name="radioHorizontalPanel">
         <property name="text">
-         <string>Display default panel horizontally</string>
+         <string>Display panel horizontally</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="2" column="0">
        <widget class="QRadioButton" name="radioVerticalPanel">
         <property name="text">
-         <string>Restore default configuration</string>
+         <string>Display panel vertically</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QRadioButton" name="radioRestoreBackup">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Restore backed up configuration</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer">
+      <item row="3" column="0" colspan="3">
+       <widget class="Line" name="line">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
-       </spacer>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QRadioButton" name="radioDefaultPanel">
+        <property name="text">
+         <string>Restore default panel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QRadioButton" name="radioBackupPanel">
+        <property name="text">
+         <string>Backup current panel configuration</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QRadioButton" name="radioRestoreBackup">
+        <property name="text">
+         <string>Restore backup panel configuration</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
-    <layout class="QGridLayout" name="buttonBar" columnstretch="0,0,0,0,0,0,0,0,0,0">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
+   <item row="1" column="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-     <property name="leftMargin">
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="buttonAbout">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>About this application</string>
+     </property>
+     <property name="text">
+      <string>About...</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/accessories-text-editor.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/accessories-text-editor.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Alt+B</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="buttonHelp">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Display help </string>
+     </property>
+     <property name="text">
+      <string>Help</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gnome-help.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gnome-help.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Alt+H</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <spacer name="horizontalSpacer1">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>28</width>
+       <height>29</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLabel" name="labelMX">
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="midLineWidth">
       <number>0</number>
      </property>
-     <property name="topMargin">
-      <number>0</number>
+     <property name="text">
+      <string/>
      </property>
-     <property name="rightMargin">
-      <number>0</number>
+     <property name="pixmap">
+      <pixmap>../../../../../../../../usr/share/mx-panel-orientation/icons/mxfcelogo.png</pixmap>
      </property>
-     <property name="bottomMargin">
-      <number>0</number>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
-     <property name="spacing">
-      <number>5</number>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <spacer name="horizontalSpacer2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="buttonHelp">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="toolTip">
-        <string>Display help </string>
-       </property>
-       <property name="text">
-        <string>Help</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gnome-help.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gnome-help.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Alt+H</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="5">
-      <spacer name="horizontalSpacer2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>100</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="buttonAbout">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="toolTip">
-        <string>About this application</string>
-       </property>
-       <property name="text">
-        <string>About...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/accessories-text-editor.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/accessories-text-editor.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Alt+B</string>
-       </property>
-       <property name="autoDefault">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <spacer name="horizontalSpacer1">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>183</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="9">
-      <widget class="QPushButton" name="buttonCancel">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="toolTip">
-        <string>Quit application</string>
-       </property>
-       <property name="text">
-        <string>Cancel</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gtk-cancel.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gtk-cancel.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Alt+N</string>
-       </property>
-       <property name="autoDefault">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QLabel" name="labelMX">
-       <property name="maximumSize">
-        <size>
-         <width>32</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="midLineWidth">
-        <number>0</number>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../../../../../../../usr/share/mx-panel-orientation/icons/mxfcelogo.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="7">
-      <widget class="QPushButton" name="buttonApply">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Apply</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/dialog-ok.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/dialog-ok.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string/>
-       </property>
-       <property name="autoDefault">
-        <bool>true</bool>
-       </property>
-       <property name="default">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>18</width>
+       <height>29</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="5">
+    <widget class="QPushButton" name="buttonApply">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/dialog-ok.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/dialog-ok.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string/>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="6">
+    <widget class="QPushButton" name="buttonCancel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Quit application</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gtk-cancel.png</normaloff>../../../../../../../../usr/share/mx-panel-orientation/icons/gtk-cancel.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Alt+N</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
