@@ -90,19 +90,23 @@ void mxpanelorientation::on_buttonApply_clicked()
     //read in plugin ID's
     if (ui->radioHorizontalPanel->isChecked()) {
         fliptohorizontal();
+        system("sleep .5");
     }
 
     if (ui->radioVerticalPanel->isChecked()) {
         fliptovertical();
+        system("sleep .5");
     }
 
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
+        system("sleep .5");
         whichpanel();
     }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
+        system("sleep .5");
         whichpanel();
     }
 
