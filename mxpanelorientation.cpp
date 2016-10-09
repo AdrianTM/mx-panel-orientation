@@ -90,23 +90,23 @@ void mxpanelorientation::on_buttonApply_clicked()
     //read in plugin ID's
     if (ui->radioHorizontalPanel->isChecked()) {
         flipToHorizontal();
-        system("sleep .5");
+        runCmd("sleep .5");
     }
 
     if (ui->radioVerticalPanel->isChecked()) {
         flipToVertical();
-        system("sleep .5");
+        runCmd("sleep .5");
     }
 
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
-        system("sleep .5");
+        runCmd("sleep .5");
         whichPanel();
     }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
-        system("sleep .5");
+        runCmd("sleep .5");
         whichPanel();
     }
 
@@ -338,7 +338,7 @@ void mxpanelorientation::flipToHorizontal()
 
     //restart xfce4-panel
 
-    system("xfce4-panel -r");
+    runCmd("xfce4-panel -r");
 
 }
 
@@ -488,13 +488,13 @@ void mxpanelorientation::flipToVertical()
 
     //restart xfce4-panel
 
-    system("xfce4-panel -r");
+    runCmd("xfce4-panel -r");
 }
 
 // backs up the current panel configuration
 void mxpanelorientation::backupPanel()
 {
-    system("mkdir -p ~/.restore/.config/xfce4; \
+    runCmd("mkdir -p ~/.restore/.config/xfce4; \
            mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
             cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
     cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
@@ -503,14 +503,14 @@ void mxpanelorientation::backupPanel()
 void mxpanelorientation::restoreDefaultPanel()
 {
     // copy template files
-    system("cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
+    runCmd("cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
            cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-            pkill xfconfd; xfce4-panel -r ");
+            pkill xfconfd; xfce4-panel -r");
 }
 
 void mxpanelorientation::restoreBackup()
 {
-    system("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
+    runCmd("cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
            cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
             pkill xfconfd; xfce4-panel -r");
 }
