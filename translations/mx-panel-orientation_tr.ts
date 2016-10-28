@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="tr" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation>Devi eseguire questo programma come normale utente.</translation>
+        <translation>Bu programı normal kullanıcı olarak çalıştırmalısınız.</translation>
     </message>
 </context>
 <context>
@@ -16,12 +16,12 @@
         <location filename="../mxpanelorientation.cpp" line="137"/>
         <location filename="../mxpanelorientation.cpp" line="146"/>
         <source>MX Panel Orientation</source>
-        <translation>MX Orientazione Pannello</translation>
+        <translation>MX Panel Yerleşimi</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Panel Options</source>
-        <translation type="unfinished"/>
+        <translation>Panel Seçenekleri</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Öntanımlı panele geri dön</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Şimdiki panel yapılandırmasını yedekle</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>
         <source>About this application</source>
-        <translation>Informazioni riguardo questa applicazione</translation>
+        <translation>Uygulama hakkında</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="107"/>
         <source>About...</source>
-        <translation>Info...</translation>
+        <translation>Hakkında...</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="114"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="130"/>
         <source>Display help </source>
-        <translation>Visualizza aiuto</translation>
+        <translation>Yardımı görüntüle</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="133"/>
         <source>Help</source>
-        <translation>Aiuto</translation>
+        <translation>Yardım</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="140"/>
@@ -91,18 +91,18 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="207"/>
         <source>Apply</source>
-        <translation>Applica</translation>
+        <translation>Uygula</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="233"/>
         <source>Quit application</source>
-        <translation> Chiudi l&apos;applicazione</translation>
+        <translation>Uygulamadan çık</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="236"/>
         <location filename="../mxpanelorientation.cpp" line="134"/>
         <source>Cancel</source>
-        <translation>Annulla</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="243"/>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../mxpanelorientation.cpp" line="129"/>
         <source>About MX Panel Orientation</source>
-        <translation>Informazioni su MX Orientazione Pannello</translation>
+        <translation>MX Panel Yerleşimi Hakkında</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="130"/>
         <source>Version: </source>
-        <translation>Versione:</translation>
+        <translation>Sürüm</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation>Applicazione per cambiare l&apos;orientazione del pannello di Xfce in MX Linux</translation>
+        <translation>MX Linux&apos;da Xfce panel konumunu değiştirmek için program</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="133"/>
@@ -133,17 +133,17 @@
         <location filename="../mxpanelorientation.cpp" line="135"/>
         <location filename="../mxpanelorientation.cpp" line="137"/>
         <source>License</source>
-        <translation>Licenza</translation>
+        <translation>Ruhsat</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="520"/>
         <source>Panel settings</source>
-        <translation>Impostazioni Pannello</translation>
+        <translation>Panel ayarları</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="521"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Le tue attuali impostazioni del panello sono state copiate in una cartella nascosta chiamata .restore presente nella tua cartella utente (~/.restore/)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
