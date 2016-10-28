@@ -1,133 +1,149 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation>Diese Anwendung muss als normaler Benutzer ausgeführt werden.</translation>
+        <translation>Diese Anwendung muss als normaler Benutzer ausgeführt werden, nicht als root.</translation>
     </message>
 </context>
 <context>
     <name>mxpanelorientation</name>
     <message>
         <location filename="../mxpanelorientation.ui" line="14"/>
-        <location filename="../mxpanelorientation.cpp" line="48"/>
-        <location filename="../mxpanelorientation.cpp" line="115"/>
-        <location filename="../mxpanelorientation.cpp" line="122"/>
-        <location filename="../mxpanelorientation.cpp" line="131"/>
+        <location filename="../mxpanelorientation.cpp" line="53"/>
+        <location filename="../mxpanelorientation.cpp" line="130"/>
+        <location filename="../mxpanelorientation.cpp" line="137"/>
+        <location filename="../mxpanelorientation.cpp" line="146"/>
         <source>MX Panel Orientation</source>
         <translation>MX Panel-Ausrichtung</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
-        <source>Select Panel Options</source>
-        <translation>Wähle Leisten-Optionen</translation>
+        <source>Panel Options</source>
+        <translation>Optionen für Paneele</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
-        <source>Display default panel horizontally</source>
-        <translation>Voreinstellung für eine horizontale Leiste</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;wirksam NUR für die Hauptpaneele&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
-        <source>Restore default configuration</source>
-        <translation>Stelle die Voreinstellungen wieder her</translation>
+        <source>Display panel horizontally</source>
+        <translation>Paneele waagerecht</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="43"/>
-        <source>Restore backed up configuration</source>
-        <translation>Stelle die Sicherungskopie der Einstellungen wieder her</translation>
+        <location filename="../mxpanelorientation.ui" line="40"/>
+        <source>Display panel vertically</source>
+        <translation>Paneele senkrecht</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="92"/>
-        <source>Display help </source>
-        <translation>Hilfe anzeigen</translation>
+        <location filename="../mxpanelorientation.ui" line="54"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;wirksam für ALLE Paneelen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="95"/>
-        <source>Help</source>
-        <translation>Hilfe</translation>
+        <location filename="../mxpanelorientation.ui" line="61"/>
+        <source>Restore default panel</source>
+        <translation>Standard Voreinstellungen für Paneele bewirken</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="102"/>
-        <source>Alt+H</source>
-        <translation>Alt+H</translation>
+        <location filename="../mxpanelorientation.ui" line="68"/>
+        <source>Backup current panel configuration</source>
+        <translation>Paneele Konfiguration in backup-Datei sichern</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="131"/>
+        <location filename="../mxpanelorientation.ui" line="75"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Konfiguration der Paneele aus backup zurückspielen</translation>
+    </message>
+    <message>
+        <location filename="../mxpanelorientation.ui" line="104"/>
         <source>About this application</source>
         <translation>Infos zu diesem Programm</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="134"/>
+        <location filename="../mxpanelorientation.ui" line="107"/>
         <source>About...</source>
         <translation>Über...</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="141"/>
+        <location filename="../mxpanelorientation.ui" line="114"/>
         <source>Alt+B</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="173"/>
-        <source>Quit application</source>
-        <translation>Anwendung beenden</translation>
+        <location filename="../mxpanelorientation.ui" line="130"/>
+        <source>Display help </source>
+        <translation>Hilfe anzeigen</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="176"/>
-        <location filename="../mxpanelorientation.cpp" line="119"/>
-        <source>Cancel</source>
-        <translation>Abbrechen</translation>
+        <location filename="../mxpanelorientation.ui" line="133"/>
+        <source>Help</source>
+        <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="183"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
+        <location filename="../mxpanelorientation.ui" line="140"/>
+        <source>Alt+H</source>
+        <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.ui" line="221"/>
+        <location filename="../mxpanelorientation.ui" line="207"/>
         <source>Apply</source>
         <translation>Anwenden</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="89"/>
-        <location filename="../mxpanelorientation.cpp" line="98"/>
-        <source>Panel settings</source>
-        <translation>Leisten-Einstellungen</translation>
+        <location filename="../mxpanelorientation.ui" line="233"/>
+        <source>Quit application</source>
+        <translation>Anwendung beenden</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="90"/>
-        <location filename="../mxpanelorientation.cpp" line="99"/>
-        <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Von Ihren aktuellen Leisten-Einstellungen wurde eine Sicherungskopie im versteckten Ornder namens .restore in Ihrem Home-Verzeichnis erstellt. (~/.restore/)</translation>
+        <location filename="../mxpanelorientation.ui" line="236"/>
+        <location filename="../mxpanelorientation.cpp" line="134"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="114"/>
+        <location filename="../mxpanelorientation.ui" line="243"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
+        <location filename="../mxpanelorientation.cpp" line="129"/>
         <source>About MX Panel Orientation</source>
         <translation>Über MX Panel-Ausrichtung</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="115"/>
+        <location filename="../mxpanelorientation.cpp" line="130"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="116"/>
+        <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
         <translation>Programm in MX Linux zum Ändern der Orientierung des Xfce-Panels (horizontal/vertikal)</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="118"/>
+        <location filename="../mxpanelorientation.cpp" line="133"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="120"/>
-        <location filename="../mxpanelorientation.cpp" line="122"/>
+        <location filename="../mxpanelorientation.cpp" line="135"/>
+        <location filename="../mxpanelorientation.cpp" line="137"/>
         <source>License</source>
         <translation>Lizenz</translation>
+    </message>
+    <message>
+        <location filename="../mxpanelorientation.cpp" line="520"/>
+        <source>Panel settings</source>
+        <translation>Leisten-Einstellungen</translation>
+    </message>
+    <message>
+        <location filename="../mxpanelorientation.cpp" line="521"/>
+        <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
+        <translation>Von Ihren aktuellen Leisten-Einstellungen wurde eine Sicherungskopie im versteckten Ornder namens .restore in Ihrem Home-Verzeichnis erstellt. (~/.restore/)</translation>
     </message>
 </context>
 </TS>
