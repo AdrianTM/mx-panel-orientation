@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Fri, 28 Oct 2016 12:45:33 -0400
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: i386
+Version: 16.10mx16+2
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (16.10mx16+2) mx; urgency=medium
+ .
+   * translations
+Checksums-Sha1:
+ c0d24845acea52270f7d1e8f3f6479dc68165944 47598 mx-panel-orientation_16.10mx16+2_i386.deb
+Checksums-Sha256:
+ afb48615ead09447f205de172273523453788675306c465ce27a52b986c43d11 47598 mx-panel-orientation_16.10mx16+2_i386.deb
+Files:
+ 1d7d6dc76fd21d1ee4354c2b688bf2b1 47598 admin optional mx-panel-orientation_16.10mx16+2_i386.deb
