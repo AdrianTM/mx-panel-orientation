@@ -215,7 +215,7 @@ void mxpanelorientation::flipToHorizontal()
 {
     QString file_content;
     QStringList pluginIDs;
-    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
+    file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
     pluginIDs = file_content.split("\n");
     qDebug() << pluginIDs;
 
@@ -351,7 +351,7 @@ void mxpanelorientation::flipToVertical()
 {
     QString file_content;
     QStringList pluginIDs;
-    file_content = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
+    file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
     pluginIDs = file_content.split("\n");
     qDebug() << pluginIDs;
 
@@ -539,7 +539,7 @@ void mxpanelorientation::whichPanel()
     // take the first panel we see as default
     QString panel_content;
     QStringList panelIDs;
-    panel_content = runCmd("xfconf-query -c xfce4-panel -p /panels | grep -v Value | grep -v ^$").output;
+    panel_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels | grep -v Value | grep -v ^$").output;
     panelIDs = panel_content.split("\n");
     panel = panelIDs.value(0);
     qDebug() << "panel to use: " << panel;
