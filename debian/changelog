@@ -1,3 +1,9 @@
+mx-panel-orientation (16.11mx16) mx; urgency=medium
+
+  * horizontal panel on bottom, locale issue fixed
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 15 Nov 2016 14:27:33 -0400
+
 mx-panel-orientation (16.10mx16+2) mx; urgency=medium
 
   * translations 
