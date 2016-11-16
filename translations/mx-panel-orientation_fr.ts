@@ -143,7 +143,7 @@
     <message>
         <location filename="../mxpanelorientation.cpp" line="521"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Vos paramètres actuels du panneau ont été sauvegardés dans un dossier caché appelé .restore dans votre dossier de départ (~/.restore/)</translation>
+        <translation>Vos paramètres actuels du panneau ont été sauvegardés dans un dossier caché appelé .restore dans votre dossier de Home (~/.restore/)</translation>
     </message>
 </context>
 </TS>

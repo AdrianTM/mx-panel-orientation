@@ -26,37 +26,37 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;メインパネルのみに反映されます&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>パネル表示を横にする</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="40"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>パネル表示を縦にする</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;すべてのパネルに反映されます&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>デフォルトパネルを復旧する</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>現在のパネル設定をバックアップする</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>バックアップしておいたパネル設定を復旧する</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>

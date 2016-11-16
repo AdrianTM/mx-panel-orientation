@@ -21,42 +21,42 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Panel Options</source>
-        <translation type="unfinished"/>
+        <translation>Opzioni Pannello</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Effetti solo sul panello principale&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Posiziona il pannello orizzontalmente</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="40"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Posiziona il pannello verticalmente</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Effetti su tutti i pannelli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Ripristina pannello predefinito</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Backup della configurazione del pannello corrente</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Ripristina la configurazione del pannello dal backup</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>
