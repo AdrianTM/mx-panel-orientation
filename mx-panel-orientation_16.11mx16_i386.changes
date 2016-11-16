@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Tue, 15 Nov 2016 14:27:33 -0400
+Source: mx-panel-orientation
+Binary: mx-panel-orientation
+Architecture: i386
+Version: 16.11mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-panel-orientation - MX Panel Orientation
+Changes:
+ mx-panel-orientation (16.11mx16) mx; urgency=medium
+ .
+   * horizontal panel on bottom, locale issue fixed
+Checksums-Sha1:
+ 29c04404fbdaaafdd3b9bb433a729be082573a5f 47822 mx-panel-orientation_16.11mx16_i386.deb
+Checksums-Sha256:
+ 780744d1195859ddc40bb5ea5521ad93ce04bf67f00306679fa521bb54c49398 47822 mx-panel-orientation_16.11mx16_i386.deb
+Files:
+ bf85de5e8ee8ab416848b4231aa94fc4 47822 admin optional mx-panel-orientation_16.11mx16_i386.deb
