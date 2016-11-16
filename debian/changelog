@@ -1,3 +1,9 @@
+mx-panel-orientation (16.11mx16+1) mx; urgency=medium
+
+  * new translations 
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 16 Nov 2016 13:26:40 -0500
+
 mx-panel-orientation (16.11mx16) mx; urgency=medium
 
   * horizontal panel on bottom, locale issue fixed

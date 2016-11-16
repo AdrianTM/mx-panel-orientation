@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ja">
 <context>
     <name>QApplication</name>
     <message>
@@ -136,12 +138,12 @@
         <translation>ライセンス</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="520"/>
+        <location filename="../mxpanelorientation.cpp" line="525"/>
         <source>Panel settings</source>
         <translation>パネルの設定</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="521"/>
+        <location filename="../mxpanelorientation.cpp" line="526"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>現在のパネル設定はホームフォルダに .restore という隠しフォルダへバックアップしました。(~/.restore/)</translation>
     </message>
