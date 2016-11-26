@@ -80,6 +80,16 @@ private slots:
 
     void on_spinRowHeight_valueChanged(const QString &arg1);
 
+    void on_radioHorizontalPanel_clicked();
+
+    void on_radioVerticalPanel_clicked();
+
+    void on_radioDefaultPanel_clicked();
+
+    void on_radioBackupPanel_clicked();
+
+    void on_radioRestoreBackup_clicked();
+
 private:
     Ui::mxpanelorientation *ui;
 };

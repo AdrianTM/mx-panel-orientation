@@ -52,6 +52,7 @@ void mxpanelorientation::setup()
     version = getVersion("mx-panel-orientation");
     this->setWindowTitle(tr("MX Panel Orientation"));
     this->adjustSize();
+    ui->buttonApply->setEnabled(false);
     whichPanel();
     setupUiSelections();
 
@@ -87,6 +88,7 @@ QString mxpanelorientation::getVersion(QString name)
 // Apply button clicked
 void mxpanelorientation::on_buttonApply_clicked()
 {
+    ui->buttonApply->setEnabled(false);
     //read in plugin ID's
     if (ui->radioHorizontalPanel->isChecked()) {
         flipToHorizontal();
@@ -543,4 +545,32 @@ void mxpanelorientation::whichPanel()
     panelIDs = panel_content.split("\n");
     panel = panelIDs.value(0);
     qDebug() << "panel to use: " << panel;
+}
+
+void mxpanelorientation::on_radioHorizontalPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+}
+
+void mxpanelorientation::on_radioVerticalPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+}
+
+void mxpanelorientation::on_radioDefaultPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+
+}
+
+void mxpanelorientation::on_radioBackupPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+
+}
+
+void mxpanelorientation::on_radioRestoreBackup_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+
 }
