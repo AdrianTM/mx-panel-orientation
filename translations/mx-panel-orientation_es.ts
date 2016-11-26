@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es">
 <context>
     <name>QApplication</name>
     <message>
@@ -21,42 +23,42 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Panel Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones de panel</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta solamente el panel principal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Desplegar panel horizontalmente</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="40"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Desplegar panel vertical</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta todos los paneles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Restablecer panel por defecto</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Respaldar configuración del panel actual</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Restaurar configuración del panel de respaldo</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>
@@ -136,12 +138,12 @@
         <translation>Licencia</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="520"/>
+        <location filename="../mxpanelorientation.cpp" line="525"/>
         <source>Panel settings</source>
         <translation>Ajustes del panel</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="521"/>
+        <location filename="../mxpanelorientation.cpp" line="526"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation> Su configuración del panel se ha respaldado en una carpeta oculta llamada .restore en su folder home (~/.restore/)</translation>
     </message>
