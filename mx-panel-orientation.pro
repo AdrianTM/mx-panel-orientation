@@ -42,6 +42,7 @@ TRANSLATIONS += translations/mx-panel-orientation_ca.ts \
                 translations/mx-panel-orientation_fr.ts \
                 translations/mx-panel-orientation_it.ts \
                 translations/mx-panel-orientation_ja.ts \
+                translations/mx-panel-orientation_kk.ts \
                 translations/mx-panel-orientation_nl.ts \
                 translations/mx-panel-orientation_pl.ts \
                 translations/mx-panel-orientation_pt.ts \
