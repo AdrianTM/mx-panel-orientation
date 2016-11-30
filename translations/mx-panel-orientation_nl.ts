@@ -14,9 +14,9 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="14"/>
         <location filename="../mxpanelorientation.cpp" line="53"/>
-        <location filename="../mxpanelorientation.cpp" line="130"/>
-        <location filename="../mxpanelorientation.cpp" line="137"/>
-        <location filename="../mxpanelorientation.cpp" line="146"/>
+        <location filename="../mxpanelorientation.cpp" line="132"/>
+        <location filename="../mxpanelorientation.cpp" line="139"/>
+        <location filename="../mxpanelorientation.cpp" line="148"/>
         <source>MX Panel Orientation</source>
         <translation>MX Paneel Oriëntatie</translation>
     </message>
@@ -102,7 +102,7 @@
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="236"/>
-        <location filename="../mxpanelorientation.cpp" line="134"/>
+        <location filename="../mxpanelorientation.cpp" line="136"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -112,38 +112,38 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="129"/>
+        <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>About MX Panel Orientation</source>
         <translation>Over MX Paneel Oriëntatie</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="130"/>
+        <location filename="../mxpanelorientation.cpp" line="132"/>
         <source>Version: </source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="131"/>
+        <location filename="../mxpanelorientation.cpp" line="133"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
         <translation>Programma om de Xfce paneel oriëntatie in MX Linux the veranderen</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="133"/>
+        <location filename="../mxpanelorientation.cpp" line="135"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="135"/>
         <location filename="../mxpanelorientation.cpp" line="137"/>
+        <location filename="../mxpanelorientation.cpp" line="139"/>
         <source>License</source>
         <translation>Licentie</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="525"/>
+        <location filename="../mxpanelorientation.cpp" line="527"/>
         <source>Panel settings</source>
         <translation>Paneel instellingen</translation>
     </message>
     <message>
-        <location filename="../mxpanelorientation.cpp" line="526"/>
+        <location filename="../mxpanelorientation.cpp" line="528"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
