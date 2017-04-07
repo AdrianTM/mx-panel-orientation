@@ -36,6 +36,7 @@ HEADERS  += mxpanelorientation.h
 FORMS    += mxpanelorientation.ui
 
 TRANSLATIONS += translations/mx-panel-orientation_ca.ts \
+                translations/mx-panel-orientation_cs.ts \
                 translations/mx-panel-orientation_de.ts \
                 translations/mx-panel-orientation_el.ts \
                 translations/mx-panel-orientation_es.ts \
@@ -43,6 +44,7 @@ TRANSLATIONS += translations/mx-panel-orientation_ca.ts \
                 translations/mx-panel-orientation_it.ts \
                 translations/mx-panel-orientation_ja.ts \
                 translations/mx-panel-orientation_kk.ts \
+                translations/mx-panel-orientation_lt.ts \
                 translations/mx-panel-orientation_nl.ts \
                 translations/mx-panel-orientation_pl.ts \
                 translations/mx-panel-orientation_pt.ts \

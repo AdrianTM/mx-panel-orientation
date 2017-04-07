@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="cs" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation>Tem que executar este programa como utilizador normal</translation>
+        <translation>Tento program musíte spustit jako normální uživatel</translation>
     </message>
 </context>
 <context>
@@ -16,57 +16,57 @@
         <location filename="../mxpanelorientation.cpp" line="139"/>
         <location filename="../mxpanelorientation.cpp" line="148"/>
         <source>MX Panel Orientation</source>
-        <translation>MX_Disposição de Painéis</translation>
+        <translation>Orientace panelu MX</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Panel Options</source>
-        <translation>OPções de painel</translation>
+        <translation>Nastavení hlavního panelu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta apenas o painel principal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ovlivňuje pouze hlavní panel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Display panel horizontally</source>
-        <translation>Dispor painel horizontalmente</translation>
+        <translation>Zobraz panel horizontálně</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="40"/>
         <source>Display panel vertically</source>
-        <translation>Dispor painel verticalmente</translation>
+        <translation>Zobraz panel vertikálně</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta todos os painéis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ovlivňuje všechny panely&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation>Restaurar o painel pré-definido</translation>
+        <translation>Obnovit výrobní nastavení</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation>Guardar (backup) a actual configuração do painel</translation>
+        <translation>Zálohovat aktuální nastavení panelu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
         <source>Restore backup panel configuration</source>
-        <translation>Restaurar a configuração do painel guardada</translation>
+        <translation>Obnovit zálohované nastavení panelu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>
         <source>About this application</source>
-        <translation>Sobre esta aplicação</translation>
+        <translation>O této aplikaci</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="107"/>
         <source>About...</source>
-        <translation>Sobre...</translation>
+        <translation>O...</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="114"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="130"/>
         <source>Display help </source>
-        <translation>Mostrar a ajuda</translation>
+        <translation>Zobrazit nápovědu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="133"/>
         <source>Help</source>
-        <translation>Ajuda</translation>
+        <translation>Nápověda</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="140"/>
@@ -91,18 +91,18 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="207"/>
         <source>Apply</source>
-        <translation>Aplicar</translation>
+        <translation>Použít</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="233"/>
         <source>Quit application</source>
-        <translation>Sair da aplicação</translation>
+        <translation>Ukončit aplikaci</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="236"/>
         <location filename="../mxpanelorientation.cpp" line="136"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Zrušit</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="243"/>
@@ -112,38 +112,38 @@
     <message>
         <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>About MX Panel Orientation</source>
-        <translation>Sobre o MX_Disposição de Painéis</translation>
+        <translation>O Orientace panelu MX</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="132"/>
         <source>Version: </source>
-        <translation>Versão:</translation>
+        <translation>Verze:</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="133"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation>Programa para alterar a disposição dos painéis do Xfce no Linux MX</translation>
+        <translation>Program pro změnu orientace panelu Xfce v MX Linuxu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="135"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>Copyright (c) MX Linux</translation>
+        <translation>Vlastnická práva (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="137"/>
         <location filename="../mxpanelorientation.cpp" line="139"/>
         <source>License</source>
-        <translation>Licença</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="527"/>
         <source>Panel settings</source>
-        <translation>Definições do painel</translation>
+        <translation>Nastavení panelu</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="528"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>As definições actuais do painel foram guardadas num ficheiro oculto chamado .restore na directoria/pasta home</translation>
+        <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
 </context>
 </TS>
