@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.1" language="kk">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>You must run this program as normal user.</source>
-        <translation>U moet dit programma als normale gebruiker uitvoeren.</translation>
+        <translation>Бұл бағдарламаны қалыпты пайдаланушы атынан жөнелтуіңіз керек.</translation>
     </message>
 </context>
 <context>
@@ -18,57 +18,57 @@
         <location filename="../mxpanelorientation.cpp" line="139"/>
         <location filename="../mxpanelorientation.cpp" line="148"/>
         <source>MX Panel Orientation</source>
-        <translation>MX Paneel Oriëntatie</translation>
+        <translation>MX панельдер бағдары</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="20"/>
         <source>Panel Options</source>
-        <translation>Paneel Opties</translation>
+        <translation>Панель опциялары</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="26"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects main panel only&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beïnvloedt enkel huidig paneel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Тек басты панельдерге әсер етеді&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="33"/>
         <source>Display panel horizontally</source>
-        <translation>Laat standaard paneel horizontaal zien</translation>
+        <translation>Панельді горизонталды көрсету</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="40"/>
         <source>Display panel vertically</source>
-        <translation>Laat standaard paneel verticaal zien</translation>
+        <translation>Панельді вертикалды көрсету</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beïnvloedt alle panelen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Барлық панельдерге әсер етеді&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="61"/>
         <source>Restore default panel</source>
-        <translation>Herstel standaard paneel</translation>
+        <translation>Бастапқы панельді қалпына келтіру</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="68"/>
         <source>Backup current panel configuration</source>
-        <translation>Backup huidige paneel configuratie</translation>
+        <translation>Ағымдағы панель баптауларын қор көшірмеге сақтау</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="75"/>
         <source>Restore backup panel configuration</source>
-        <translation>Herstel gebackupte paneel configuratie</translation>
+        <translation>Ағымдағы панель баптауларын қор көшірмеден қалпына келтіру</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="104"/>
         <source>About this application</source>
-        <translation>Over deze toepassing</translation>
+        <translation>Бұл қолданба жөнінде</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="107"/>
         <source>About...</source>
-        <translation>Over...</translation>
+        <translation>Осы туралы...</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="114"/>
@@ -78,12 +78,12 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="130"/>
         <source>Display help </source>
-        <translation>Toon help</translation>
+        <translation>Көмекті көрсету</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="133"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation>Көмек</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="140"/>
@@ -93,18 +93,18 @@
     <message>
         <location filename="../mxpanelorientation.ui" line="207"/>
         <source>Apply</source>
-        <translation>Toepassen</translation>
+        <translation>Іске асыру</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="233"/>
         <source>Quit application</source>
-        <translation>Verlaat de applicatie</translation>
+        <translation>Қолданба жұмысын аяқтау</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="236"/>
         <location filename="../mxpanelorientation.cpp" line="136"/>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>Бас тарту</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.ui" line="243"/>
@@ -114,17 +114,17 @@
     <message>
         <location filename="../mxpanelorientation.cpp" line="131"/>
         <source>About MX Panel Orientation</source>
-        <translation>Over MX Paneel Oriëntatie</translation>
+        <translation>MX панельдер бағдары қолданбасы жөнінде</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="132"/>
         <source>Version: </source>
-        <translation>Versie:</translation>
+        <translation>Нұсқасы:</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="133"/>
         <source>Program for changing the Xfce panel orientation in MX Linux</source>
-        <translation>Programma om de Xfce paneel oriëntatie in MX Linux the veranderen</translation>
+        <translation>MX Linux ішінде Xfce панель бағдарын ауыстыру қолданбасы</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="135"/>
@@ -135,17 +135,17 @@
         <location filename="../mxpanelorientation.cpp" line="137"/>
         <location filename="../mxpanelorientation.cpp" line="139"/>
         <source>License</source>
-        <translation>Licentie</translation>
+        <translation>Лицензиясы</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="527"/>
         <source>Panel settings</source>
-        <translation>Paneel instellingen</translation>
+        <translation>Панель баптаулары</translation>
     </message>
     <message>
         <location filename="../mxpanelorientation.cpp" line="528"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
+        <translation>Сіздің ағымдағы панель баптауларыңыз сіздің үй бумаңыздағы .restore деп аталатын жасырын бумаға (~/.restore/) қор көшірмеге сақталды</translation>
     </message>
 </context>
 </TS>

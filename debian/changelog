@@ -1,3 +1,9 @@
+mx-panel-orientation (16.11mx16+3) mx; urgency=medium
+
+  * new translations
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 30 Nov 2016 12:15:03 -0500
+
 mx-panel-orientation (16.11mx16+2) mx; urgency=medium
 
   * modified apply button
