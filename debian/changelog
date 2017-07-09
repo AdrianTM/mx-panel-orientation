@@ -1,3 +1,9 @@
+mx-panel-orientation (17.04mx16) mx; urgency=medium
+
+  * refreshed translations, new debs
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 10 Apr 2017 12:15:03 -0500
+
 mx-panel-orientation (16.11mx16+3) mx; urgency=medium
 
   * new translations
